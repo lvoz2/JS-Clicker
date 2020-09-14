@@ -69,7 +69,11 @@
 			<nav>
 			</nav>
 		</div>
-		<button class="button1" id="btn" onclick="load()"><span>Click Me to Start</span></button>
+		<div id="launch">
+			<p>Do you have a save?</p>
+			<button class="button1" onclick="find()">Yes</button>
+		</div>
+		<button class="button1" id="btn" onclick="load()"><span>No</span></button>
 		<div id="sellcoal"></div>
 		<div id="makeiron"></div>
 		<div id="selliron"></div>
@@ -111,7 +115,18 @@
 			var coalvalue;
 			var divsellcoal = document.getElementById("sellcoal");
 			var bt1;
+			var divlaunch = document.getElementById("launch");
+			var rubber = 0;
 			var onclick1;
+			function find() {
+				coins = localStorage.getItem('coins');
+				coal = localStorage.getItem('coal');
+				iron = localStorage.getItem('iron');
+				copper = localStorage.getItem('copper');
+				rubber = localStorage.getItem('rubber');
+				divlaunch.removeChild(divlaunch.childNodes[0]);
+				divlaunch.removeChild(divlaunch.childNodes[0]);
+			}
 			function load() {
 				btn.innerHTML = "Gain 1 Coal Ore";
 				x = btn.attributes[2];
@@ -280,6 +295,14 @@
 					divcoins.innerHTML = "Coins: " + coins;
 					update()
 				}
+			}
+			function save() {
+				localStorage.setItem('coins', coins);
+				localStorage.setItem('coal', coal);
+				localStorage.setItem('copper', copper);
+				localStorage.setItem('iron', iron);
+				localStorage.setItem('rubber', rubber);
+				setTimeout(save, 10000)
 			}
 		</script>
 	</body>
