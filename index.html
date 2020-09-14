@@ -229,6 +229,7 @@
 				coppervalue = copper * 5;
 				coalvalue = coal * 0.5;
 				resourcevalue = coalvalue + ironvalue + coppervalue;
+				save()
 			}
 			update()
 			function coalOre() {
@@ -299,7 +300,6 @@
 				localStorage.setItem('copper', copper);
 				localStorage.setItem('iron', iron);
 				localStorage.setItem('rubber', rubber);
-				setTimeout(save, 10000)
 			}
 		</script>
 	</body>
