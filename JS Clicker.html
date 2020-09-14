@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Click This</title>
+		<style>
+			button1:focus {outline:0;}
+			button:focus {outline:0;}
+			body {
+				color: #1A72E9;
+				margin: 5px;
+				font-weight: 1000;
+				font-family: sans-serif;
+			}
+			button {
+				background-color: #1A72E9;
+				color: white;
+				margin: 5px;
+				transition-duration: 0.5s;
+				border-radius: 12px;
+				border: 2px solid #1A72E9;
+				padding: 10px 15px;
+			}
+			button:hover {
+				background-color: white;
+				color: #1A72E9;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.button1 {
+				background-color: #1A72E9;
+				color: white;
+				margin: 5px;
+				transition-duration: 0.5s;
+				border-radius: 12px;
+				border: 2px solid #1A72E9;
+				padding: 10px 15px;
+			}
+			.button1:hover {
+				background-color: white;
+				color: #1A72E9;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.button1 span {
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition-duration: 0.5s;
+			}
+			.button1 span:after {
+				content: '\00bb';
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				right: -20px;
+			}
+
+			.button1:hover span {
+				padding-right: 25px;
+				transition-duration: 0.5s;
+			}
+
+			.button1:hover span:after {
+				opacity: 1;
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<nav>
+			</nav>
+		</div>
+		<button class="button1" id="btn" onclick="load()"><span>Click Me to Start</span></button>
+		<div id="sellcoal"></div>
+		<div id="makeiron"></div>
+		<div id="selliron"></div>
+		<div id="makecopper"></div>
+		<div id="sellcopper"></div>
+		<div id="coal"></div>
+		<div id="coins"></div>
+		<div id="iron"></div>
+		<div id="copper"></div>
+		<script>
+			var btn = document.getElementById("btn");
+			var x;
+			var copper = 0;
+			var coppervalue;
+			var divcopper = document.getElementById("copper");
+			var divmakeiron = document.getElementById("makeiron");
+			var divcoins = document.getElementById("coins");
+			var divcoal = document.getElementById("coal");
+			var coal = 0;
+			var sellcopperbutton = false;
+			var genironbutton1 = false;
+			var genironbutton = false;
+			var makeironbutton = false;
+			var coalCanSell = false;
+			var btn1;
+			var makecopperbutton = false;
+			var gencopperbutton = false;
+			var gencopperbutton1 = false;
+			var copperCanSell = false;
+			var divmakecopper = document.getElementById("makecopper");
+			var divsellcopper = document.getElementById("sellcopper");
+			var sellironbutton = false;
+			var divselliron = document.getElementById("selliron");
+			var diviron = document.getElementById("iron")
+			var sellcoalbutton = false
+			var coins = 0;
+			var iron = 0;
+			var ironCanSell = false;
+			var coalvalue;
+			var divsellcoal = document.getElementById("sellcoal");
+			var bt1;
+			var onclick1;
+			function load() {
+				btn.innerHTML = "Gain 1 Coal Ore";
+				x = btn.attributes[2];
+				x.value = "coalOre()";
+				divcoal.innerHTML = "Coal: 0";
+				divcoins.innerHTML = "Coins: 0";
+			}
+			function update() {
+				if (coal > 9) {
+					coalCanSell = true;
+				}
+				if (coalCanSell == true) {
+					if (sellcoalbutton == false) {
+						btn1 = document.createElement("BUTTON");
+						btn1.innerHTML = "Sell Coal";
+						divsellcoal.appendChild(btn1);
+						bt1 = divsellcoal.getElementsByTagName("BUTTON")[0];
+						onclick1 = document.createAttribute("onclick");
+						onclick1.value = "sellCoal()";
+						bt1.setAttributeNode(onclick1);
+						sellcoalbutton = true;
+					}
+				}
+				if (coins > 19) {
+					if (makeironbutton == false) {
+						makeironbutton = true;
+						btn3 = document.createElement("BUTTON");
+						btn3.innerHTML = "Unlock Iron Production: 100 Coins";
+						divmakeiron.appendChild(btn3);
+						bt3 = divmakeiron.getElementsByTagName("BUTTON")[0];
+						onclick3 = document.createAttribute("onclick");
+						onclick3.value = "boughtIronProduction()";
+						bt3.setAttributeNode(onclick3);
+					}
+				}
+				if (coins > 109) {
+					if (makecopperbutton == false) {
+						makecopperbutton = true;
+						btn7 = document.createElement("BUTTON");
+						btn7.innerHTML = "Unlock Copper Production: 500 Coins";
+						divmakecopper.appendChild(btn7);
+						bt7 = divmakecopper.getElementsByTagName("BUTTON")[0];
+						onclick7 = document.createAttribute("onclick");
+						onclick7.value = "boughtCopperProduction()";
+						bt7.setAttributeNode(onclick7);
+					}
+				}
+				if (iron > 9) {
+					ironCanSell = true;
+				}
+				if (copper > 9) {
+					copperCanSell = true;
+				}
+				if (genironbutton == true) {
+					if (genironbutton1 == false) {
+						btn4 = document.createElement("BUTTON");
+						btn4.innerHTML = "Gain 1 Iron Ore";
+						divmakeiron.appendChild(btn4);
+						bt4 = divmakeiron.getElementsByTagName("BUTTON")[0];
+						onclick4 = document.createAttribute("onclick");
+						onclick4.value = "ironOre()";
+						bt4.setAttributeNode(onclick4);
+						genironbutton1 = true;
+					}
+				}
+				if (gencopperbutton == true) {
+					if (gencopperbutton1 == false) {
+						btn5 = document.createElement("BUTTON");
+						btn5.innerHTML = "Gain 1 Copper Ore";
+						divmakecopper.appendChild(btn5);
+						bt5 = divmakecopper.getElementsByTagName("BUTTON")[0];
+						onclick5 = document.createAttribute("onclick");
+						onclick5.value = "copperOre()";
+						bt5.setAttributeNode(onclick5);
+						gencopperbutton1 = true;
+					}
+				}
+				if (ironCanSell == true) {
+					if (sellironbutton == false) {
+						btn2 = document.createElement("BUTTON");
+						btn2.innerHTML = "Sell Iron";
+						divselliron.appendChild(btn2);
+						bt2 = divselliron.getElementsByTagName("BUTTON")[0];
+						onclick2 = document.createAttribute("onclick");
+						onclick2.value = "sellIron()";
+						bt2.setAttributeNode(onclick2);
+						sellironbutton = true;
+					}
+				}
+				if (copperCanSell == true) {
+					if (sellcopperbutton == false) {
+						btn6 = document.createElement("BUTTON");
+						btn6.innerHTML = "Sell Copper";
+						divsellcopper.appendChild(btn6);
+						bt6 = divsellcopper.getElementsByTagName("BUTTON")[0];
+						onclick6 = document.createAttribute("onclick");
+						onclick6.value = "sellCopper()";
+						bt6.setAttributeNode(onclick6);
+						sellcopperbutton = true;
+					}
+				}
+				ironvalue = iron * 2;
+				coppervalue = copper * 5;
+				coalvalue = coal * 0.5;
+				resourcevalue = coalvalue + ironvalue + coppervalue;
+			}
+			update()
+			function coalOre() {
+				coal++;
+				divcoal.innerHTML = "Coal: " + coal;
+				update()
+			}
+			function ironOre() {
+				iron++;
+				diviron.innerHTML = "Iron Ore: " + iron;
+				update()
+			}
+			function copperOre() {
+				copper++;
+				divcopper.innerHTML = "Copper Ore: " + copper;
+				update()
+			}
+			function sellCoal() {
+				coalvalue = coal * 0.5;
+				resourcevalue = coalvalue + ironvalue;
+				coins = coins + resourcevalue;
+				coal = coal - coal;
+				divcoal.innerHTML = "Coal: " + coal;
+				divcoins.innerHTML = "Coins: " + coins;
+				update()
+			}
+			function sellIron() {
+				coins = coins + resourcevalue;
+				iron = iron - iron;
+				diviron.innerHTML = "Iron Ore: " + iron;
+				divcoins.innerHTML = "Coins: " + coins;
+				update()
+			}
+			function sellCopper() {
+				coins = coins + resourcevalue;
+				copper = copper - copper;
+				divcopper.innerHTML = "Copper Ore: " + copper;
+				divcoins.innerHTML = "Coins: " + coins;
+				update()
+			}
+			function boughtIronProduction() {
+				if ( coins < 100) {
+					alert("You don't have enough coins!")
+				}
+				if (coins > 99) {
+					genironbutton = true;
+					divmakeiron.removeChild(divmakeiron.childNodes[0]);
+					coins = coins - 100;
+					divcoins.innerHTML = "Coins: " + coins;
+					update()
+				}
+			}
+			function boughtCopperProduction() {
+				if ( coins < 500) {
+					alert("You don't have enough coins!")
+				}
+				if (coins > 499) {
+					gencopperbutton = true;
+					divmakecopper.removeChild(divmakecopper.childNodes[0]);
+					coins = coins - 500;
+					divcoins.innerHTML = "Coins: " + coins;
+					update()
+				}
+			}
+		</script>
+	</body>
+</html>
