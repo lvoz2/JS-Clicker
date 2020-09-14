@@ -69,10 +69,7 @@
 			<nav>
 			</nav>
 		</div>
-		<div id="launch">
-			<p>Do you have a save?</p>
-			<button class="button1" onclick="find()"><span>Yes</span></button>
-		</div>
+		<div id="launch"><p>Do you have a save?</p><button class="button1" onclick="find()"><span>Yes</span></button></div>
 		<button class="button1" id="btn" onclick="load()"><span>No</span></button>
 		<div id="sellcoal"></div>
 		<div id="makeiron"></div>
@@ -124,8 +121,7 @@
 				iron = localStorage.getItem('iron');
 				copper = localStorage.getItem('copper');
 				rubber = localStorage.getItem('rubber');
-				divlaunch.removeChild(divlaunch.childNodes[0]);
-				divlaunch.removeChild(divlaunch.childNodes[0]);
+				divlaunch.innerHTML = "";
 			}
 			function load() {
 				btn.innerHTML = "Gain 1 Coal Ore";
