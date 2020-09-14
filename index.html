@@ -127,8 +127,9 @@
 				btn.innerHTML = "Gain 1 Coal Ore";
 				x = btn.attributes[2];
 				x.value = "coalOre()";
-				divcoal.innerHTML = "Coal: 0";
-				divcoins.innerHTML = "Coins: 0";
+				divcoal.innerHTML = "Coal: " + coal;
+				divcoins.innerHTML = "Coins: " + coins;
+				divlaunch.innerHTML = "";
 			}
 			function update() {
 				if (coal > 9) {
