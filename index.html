@@ -128,11 +128,7 @@
 			var rubber = 0;
 			var onclick1;
 			function find() {
-				coins = localStorage.getItem('coins');
-				coal = localStorage.getItem('coal');
-				iron = localStorage.getItem('iron');
-				copper = localStorage.getItem('copper');
-				rubber = localStorage.getItem('rubber');
+				savefile = localStorage.getItem('save');
 				load()
 			}
 			function load() {
@@ -307,7 +303,7 @@
 				}
 			}
 			function save() {
-				save1 = coins + coal + copper + iron + rubber;
+				save1 = "Coins=" + coins + "Coal=" + coal + "Iron=" + iron + "Copper=" + copper + "Rubber=" + rubber;
 				save = btoa(save1);
 				localStorage.setItem('save', save);
 			}
