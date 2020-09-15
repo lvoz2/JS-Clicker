@@ -355,7 +355,9 @@
 				coins = coins + rubbervalue;
 				rubber = rubber - rubber;
 				divrubber.innerHTML = "Rubber: " + rubber;
-				divcoins
+				divcoins.innerHTML = "Coins: " + coins;
+				update()
+			}
 			function boughtIronProduction() {
 				if ( coins < 100) {
 					alert("You don't have enough coins!")
