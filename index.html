@@ -307,11 +307,9 @@
 				}
 			}
 			function save() {
-				localStorage.setItem('coins', coins);
-				localStorage.setItem('coal', coal);
-				localStorage.setItem('copper', copper);
-				localStorage.setItem('iron', iron);
-				localStorage.setItem('rubber', rubber);
+				save1 = coins + coal + copper + iron + rubber;
+				save = btoa(save1);
+				localStorage.setItem('save', save);
 			}
 		</script>
 	</body>
