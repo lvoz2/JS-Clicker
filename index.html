@@ -307,6 +307,7 @@
 			}
 			function coalOre() {
 				coal++;
+				console.log("You gained some Coal Ore");
 				divcoal.innerHTML = "Coal: " + coal;
 				update()
 			}
@@ -318,6 +319,11 @@
 			function copperOre() {
 				copper++;
 				divcopper.innerHTML = "Copper Ore: " + copper;
+				update()
+			}
+			function rubber() {
+				rubber++;
+				divrubber.innerHTML = "Rubber: " + rubber;
 				update()
 			}
 			function sellCoal() {
@@ -344,6 +350,12 @@
 				divcoins.innerHTML = "Coins: " + coins;
 				update()
 			}
+			function sellRubber() {
+				rubbervalue = rubber * 2;
+				coins = coins + rubbervalue;
+				rubber = rubber - rubber;
+				divrubber.innerHTML = "Rubber: " + rubber;
+				divcoins
 			function boughtIronProduction() {
 				if ( coins < 100) {
 					alert("You don't have enough coins!")
