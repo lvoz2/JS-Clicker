@@ -70,7 +70,7 @@
 			</nav>
 		</div>
 		<div id="launch"><p>Do you have a save?</p><button class="button1" onclick="find()"><span>Yes</span></button></div>
-		<button class="button1" id="btn" onclick="load()"><span>No</span></button>
+		<button class="button1" id="btn" onclick="alternate()"><span>No</span></button>
 		<div id="sellcoal"></div>
 		<div id="makeiron"></div>
 		<div id="selliron"></div>
@@ -87,21 +87,21 @@
 			var btn = document.getElementById("btn");
 			var x;
 			var rubbervalue;
-			var copper = 0;
+			var copper;
 			var coppervalue;
 			var divcopper = document.getElementById("copper");
 			var divrubber = document.getElementById("rubber");
 			var divmakeiron = document.getElementById("makeiron");
 			var divcoins = document.getElementById("coins");
 			var divcoal = document.getElementById("coal");
-			var coal = 0;
+			var coal;
 			var sellcopperbutton = false;
 			var genironbutton1 = false;
 			var genironbutton = false;
 			var makeironbutton = false;
 			var coalCanSell = false;
 			var btn1;
-			var rubber = 0;
+			var rubber;
 			var makecopperbutton = false;
 			var gencopperbutton = false;
 			var gencopperbutton1 = false;
@@ -118,14 +118,14 @@
 			var divselliron = document.getElementById("selliron");
 			var diviron = document.getElementById("iron")
 			var sellcoalbutton = false
-			var coins = 0;
-			var iron = 0;
+			var coins;
+			var iron;
 			var ironCanSell = false;
 			var coalvalue;
 			var divsellcoal = document.getElementById("sellcoal");
 			var bt1;
 			var divlaunch = document.getElementById("launch");
-			var rubber = 0;
+			var rubber;
 			var onclick1;
 			var coinfile;
 			var coalfile;
@@ -150,6 +150,12 @@
 				rubber = parseInt(rubberfile);
 				load()
 			}
+			function alternate() {
+				coal = 0;
+				coins = 0;
+				iron = 0;
+				copper = 0;
+				rubber = 0;
 			function load() {
 				btn.innerHTML = "Gain 1 Coal Ore";
 				x = btn.attributes[2];
