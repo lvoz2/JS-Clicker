@@ -138,6 +138,13 @@
 				ironfile = localStorage.getItem('iron');
 				copperfile = localStorage.getItem('copper');
 				rubberfile = localStorage.getItem('rubber');
+				coalCanSellfile = localStorage.getItem('coalCanSell');
+				gencopperbuttonfile = localStorage.getItem('gencopperbutton');
+				copperCanSellfile = localStorage.getItem('copperCanSell');
+				rubberCanSellfile = localStorage.getItem('rubberCanSell');
+				genrubberbuttonfile = localStorage.getItem('genrubberbutton');
+				genironbuttonfile = localStorage.getItem('genironbutton');
+				ironCanSellfile = localStorage.getItem('ironCanSell');
 				coinfile = atob(coinfile);
 				coalfile = atob(coalfile);
 				ironfile = atob(ironfile);
@@ -166,20 +173,20 @@
 				copper = 0;
 				rubber = 0;
 				ironCanSell = false;
+				genrubberbutton = false;
+				rubberCanSell = false;
+				copperCanSell = false;
+				gencopperbutton = false;
+				coalCanSell = false;
+				genironbutton = false;
 				sellironbutton = false;
 				sellcoalbutton = false;
 				makerubberbutton = false;
 				makeironbutton = false;
-				genrubberbutton = false;
 				sellcopperbutton = false;
 				genrubberbutton1 = false;
-				rubberCanSell = false;
-				copperCanSell = false;
 				gencopperbutton1 = false;
-				gencopperbutton = false;
 				makecopperbutton = false;
-				coalCanSell = false;
-				genironbutton = false;
 				genironbutton1 = false;
 				load()
 			}
@@ -289,7 +296,6 @@
 				ironvalue = iron * 2;
 				coppervalue = copper * 5;
 				coalvalue = coal * 0.5;
-				resourcevalue = coalvalue + ironvalue + coppervalue;
 				save()
 			}
 			function coalOre() {
@@ -309,22 +315,23 @@
 			}
 			function sellCoal() {
 				coalvalue = coal * 0.5;
-				resourcevalue = coalvalue + ironvalue;
-				coins = coins + resourcevalue;
+				coins = coins + coalvalue;
 				coal = coal - coal;
 				divcoal.innerHTML = "Coal: " + coal;
 				divcoins.innerHTML = "Coins: " + coins;
 				update()
 			}
 			function sellIron() {
-				coins = coins + resourcevalue;
+				ironvalue = iron * 2;
+				coins = coins + ironvalue;
 				iron = iron - iron;
 				diviron.innerHTML = "Iron Ore: " + iron;
 				divcoins.innerHTML = "Coins: " + coins;
 				update()
 			}
 			function sellCopper() {
-				coins = coins + resourcevalue;
+				coppervalue = copper * 5;
+				coins = coins + coppervalue;
 				copper = copper - copper;
 				divcopper.innerHTML = "Copper Ore: " + copper;
 				divcoins.innerHTML = "Coins: " + coins;
@@ -365,6 +372,7 @@
 				ironsave = btoa(ironsave);
 				coppersave = btoa(coppersave);
 				rubbersave = btoa(rubbersave);
+				
 				localStorage.setItem('coins', coinsave);
 				localStorage.setItem('coal', coalsave);
 				localStorage.setItem('iron', ironsave);
