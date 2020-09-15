@@ -145,6 +145,9 @@
 				genrubberbuttonfile = localStorage.getItem('genrubberbutton');
 				genironbuttonfile = localStorage.getItem('genironbutton');
 				ironCanSellfile = localStorage.getItem('ironCanSell');
+				makeironbuttonfile = localStorage.getItem('makeironbutton');
+				makecopperbuttonfile = localStorage.getItem('makecopperbutton');
+				makerubberbuttonfile = localStorage.getItem('makerubberbutton');
 				coinfile = atob(coinfile);
 				coalfile = atob(coalfile);
 				ironfile = atob(ironfile);
@@ -157,6 +160,9 @@
 				genironbutton = atob(genironbuttonfile);
 				gencopperbutton = atob(gencopperbuttonfile);
 				genrubberbutton = atob(genrubberbuttonfile);
+				makerubberbutton = atob(makerubberbuttonfile);
+				makeironbutton = atob(makeironbuttonfile);
+				makecopperbutton = atob(makecopperbuttonfile);
 				coins = parseInt(coinfile);
 				coal = parseInt(coalfile);
 				iron = parseInt(ironfile);
@@ -164,12 +170,9 @@
 				rubber = parseInt(rubberfile);
 				sellironbutton = false;
 				sellcoalbutton = false;
-				makerubberbutton = false;
-				makeironbutton = false;
 				sellcopperbutton = false;
 				genrubberbutton1 = false;
 				gencopperbutton1 = false;
-				makecopperbutton = false;
 				genironbutton1 = false;
 				load()
 			}
@@ -383,7 +386,7 @@
 			}
 			function boughtRubberProduction() {
 				if (coins < 1500) {
-					slert("You don't have enough coins!")
+					alert("You don't have enough coins!")
 				}
 				if (coins > 1499) {
 					genrubberbutton = true;
