@@ -371,13 +371,25 @@
 				}
 			}
 			function boughtCopperProduction() {
-				if ( coins < 500) {
+				if (coins < 500) {
 					alert("You don't have enough coins!")
 				}
 				if (coins > 499) {
 					gencopperbutton = true;
 					divmakecopper.removeChild(divmakecopper.childNodes[0]);
 					coins = coins - 500;
+					divcoins.innerHTML = "Coins: " + coins;
+					update()
+				}
+			}
+			function boughtRubberProduction() {
+				if (coins < 1500) {
+					slert("You don't have enough coins!")
+				}
+				if (coins > 1499) {
+					genrubberbutton = true;
+					divmakerubber.removeChild(divmakerubber.childNodes[0]);
+					coins = coins - 1500;
 					divcoins.innerHTML = "Coins: " + coins;
 					update()
 				}
