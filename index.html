@@ -321,7 +321,7 @@
 						divmakerubber.appendChild(btn9);
 						bt9 = divmakerubber.getElementsByTagName("BUTTON")[0];
 						onclick9 = document.createAttribute("onclick");
-						onclick9.value = "rubber()";
+						onclick9.value = "rubberUp()";
 						bt9.setAttributeNode(onclick9);
 						genrubberbutton1 = true;
 					}
@@ -370,7 +370,7 @@
 				divcopper.innerHTML = "Copper: " + copper;
 				update()
 			}
-			function rubber() {
+			function rubberUp() {
 				rubber++;
 				divrubber.innerHTML = "Rubber: " + rubber;
 				update()
