@@ -498,16 +498,11 @@
 				}
 			}
 			function save() {
-				coinsave = coins;
-				coalsave = coal;
-				ironsave = iron;
-				coppersave = copper;
-				rubbersave = rubber;
-				coinsave = btoa(coinsave);
-				coalsave = btoa(coalsave);
-				ironsave = btoa(ironsave);
-				coppersave = btoa(coppersave);
-				rubbersave = btoa(rubbersave);
+				coinsave = btoa(coins);
+				coalsave = btoa(coal);
+				ironsave = btoa(iron);
+				coppersave = btoa(copper);
+				rubbersave = btoa(rubber);
 				genrubberbuttonsave = btoa(genrubberbutton);
 				gencopperbuttonsave = btoa(gencopperbutton);
 				genironbuttonsave = btoa(genironbutton);
@@ -518,6 +513,9 @@
 				makeironbuttonsave = btoa(makeironbuttonclickedsuccess);
 				makecopperbuttonsave = btoa(makecopperbuttonclickedsuccess);
 				makerubberbuttonsave = btoa(makerubberbuttonclickedsuccess);
+				readyironsave = btoa(readyiron);
+				readycoppersave = btoa(readycopper);
+				readyrubbersave = btoa(readyrubber);
 				localStorage.setItem('coins', coinsave);
 				localStorage.setItem('coal', coalsave);
 				localStorage.setItem('iron', ironsave);
@@ -533,6 +531,9 @@
 				localStorage.setItem('makeironbutton', makeironbuttonsave);
 				localStorage.setItem('makecopperbutton', makecopperbuttonsave);
 				localStorage.setItem('makerubberbutton', makerubberbuttonsave);
+				localStorage.setItem('readyiron', readyironsave);
+				localStorage.setItem('readycopper', readycoppersave);
+				localStorage.setItem('readyrubber', readyrubbersave);
 			}
 		</script>
 	</body>
