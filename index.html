@@ -77,8 +77,7 @@
 			<nav>
 			</nav>
 		</div>
-		<div id="launch"><p>Do you have a save?</p><button class="button1" onclick="find()"><span>Yes</span></button></div>
-		<button class="button1" id="btn" onclick="alternate()"><span>No</span></button>
+		<button class="button1" id="btn" onclick="start()"><span>Click to Start</span></button>
 		<div id="sellcoal"></div>
 		<div id="makeiron"></div>
 		<div id="selliron"></div>
@@ -148,7 +147,13 @@
 			var copperfile;
 			var rubberfile;
 			function start() {
-				if (save !=  
+                                savefile = localStorage.getItem(‘save’);
+				if (savefile != 2) {
+                                       alternate()
+                                }
+                                if (savefile == 2) {
+                                       find()
+                                }
 			function find() {
 				coinfile = localStorage.getItem('coins');
 				coalfile = localStorage.getItem('coal');
