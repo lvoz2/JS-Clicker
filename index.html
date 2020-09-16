@@ -149,11 +149,12 @@
 			function start() {
                                 savefile = localStorage.getItem(‘save’);
 				if (savefile != 2) {
-                                       alternate()
+                                	alternate()
                                 }
-                                if (savefile == 2) {
-                                       find()
+				if (savefile == 2) {
+                                	find()
                                 }
+			}
 			function find() {
 				coinfile = localStorage.getItem('coins');
 				coalfile = localStorage.getItem('coal');
