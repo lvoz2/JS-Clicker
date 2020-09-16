@@ -147,6 +147,8 @@
 			var ironfile;
 			var copperfile;
 			var rubberfile;
+			function start() {
+				if (save !=  
 			function find() {
 				coinfile = localStorage.getItem('coins');
 				coalfile = localStorage.getItem('coal');
@@ -516,6 +518,7 @@
 				readyironsave = btoa(readyiron);
 				readycoppersave = btoa(readycopper);
 				readyrubbersave = btoa(readyrubber);
+				save = coinsave + coalsave + ironsave + coppersave + rubbersave + genrubberbuttonsave + gencopperbuttonsave + genironbuttonsave + coalCanSellsave + ironCanSellsave + copperCanSellsave + rubberCanSellsave + makeironbuttonclickedsuccess + makecopperbuttonclickedsuccess + makerubberbuttonclickedsuccess + readyironsave + readycoppersave + readyrubbersave;
 				localStorage.setItem('coins', coinsave);
 				localStorage.setItem('coal', coalsave);
 				localStorage.setItem('iron', ironsave);
@@ -534,6 +537,7 @@
 				localStorage.setItem('readyiron', readyironsave);
 				localStorage.setItem('readycopper', readycoppersave);
 				localStorage.setItem('readyrubber', readyrubbersave);
+				localStorage.setItem('save', save);
 			}
 		</script>
 	</body>
