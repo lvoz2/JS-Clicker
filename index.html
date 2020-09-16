@@ -171,6 +171,7 @@
 				sellironbutton = false;
 				sellcoalbutton = false;
 				sellcopperbutton = false;
+				sellrubberbutton = false;
 				genrubberbutton1 = false;
 				gencopperbutton1 = false;
 				genironbutton1 = false;
@@ -414,6 +415,9 @@
 				ironCanSellsave = btoa(ironCanSell);
 				copperCanSellsave = btoa(copperCanSell);
 				rubberCanSellsave = btoa(rubberCanSell);
+				makeironbuttonsave = btoa(makeironbutton);
+				makecopperbuttonsave = btoa(makecopperbutton);
+				makerubberbuttonsave = btoa(makerubberbutton);
 				localStorage.setItem('coins', coinsave);
 				localStorage.setItem('coal', coalsave);
 				localStorage.setItem('iron', ironsave);
@@ -426,6 +430,9 @@
 				localStorage.setItem('ironCanSell', ironCanSellsave);
 				localStorage.setItem('copperCanSell', copperCanSellsave);
 				localStorage.setItem('rubberCanSell', rubberCanSellsave);
+				localStorage.setItem('makeironbutton', makeironbuttonsave);
+				localStorage.setItem('makecopperbutton', makecopperbuttonsave);
+				localStorage.setItem('makerubberbutton', makerubberbuttonsave);
 			}
 		</script>
 	</body>
