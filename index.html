@@ -287,6 +287,9 @@
 				if (copper > 9) {
 					copperCanSell = true;
 				}
+				if (rubber > 9) {
+					rubberCanSell = true;
+				}
 				if (genironbutton == true) {
 					if (genironbutton1 == false) {
 						btn4 = document.createElement("BUTTON");
@@ -309,6 +312,18 @@
 						onclick5.value = "copperOre()";
 						bt5.setAttributeNode(onclick5);
 						gencopperbutton1 = true;
+					}
+				}
+				if (genrubberbutton == true) {
+					if (genrubberbutton1 == false) {
+						btn9 = document.createElement("BUTTON");
+						btn9.innerHTML = "Gain 1 Rubber";
+						divmakerubber.appendChild(btn9);
+						bt9 = divmakerubber.getElementsByTagName("BUTTON")[0];
+						onclick9 = document.createAttribute("onclick");
+						onclick9.value = "rubber()";
+						bt9.setAttributeNode(onclick9);
+						genrubberbutton1 = true;
 					}
 				}
 				if (ironCanSell == true) {
