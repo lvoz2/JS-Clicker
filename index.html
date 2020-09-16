@@ -79,10 +79,10 @@
 		<div id="makerubber"></div>
 		<div id="sellrubber"></div>
 		<div id="coal"></div>
-		<div id="coins"></div>
 		<div id="iron"></div>
 		<div id="copper"></div>
 		<div id="rubber"></div>
+		<div id="coins"></div>
 		<script>
 			var btn = document.getElementById("btn");
 			var x;
@@ -212,7 +212,7 @@
 				load()
 			}
 			function load() {
-				btn.innerHTML = "Gain 1 Coal Ore";
+				btn.innerHTML = "Gain 1 Coal";
 				x = btn.attributes[2];
 				x.value = "coalOre()";
 				divcoal.innerHTML = "Coal: " + coal;
@@ -221,6 +221,15 @@
 				update()
 			}
 			function update() {
+				if (iron != 0) {
+					diviron.innerHTML = "Iron: " + iron;
+				}
+				if (copper != 0) {
+					divcopper.innerHTML = "Copper: " + copper;
+				}
+				if (rubber != 0) {
+					divrubber.innerHTML = "Rubber: " + rubber;
+				}
 				if (coal > 9) {
 					coalCanSell = true;
 				}
@@ -269,7 +278,7 @@
 				if (genironbutton == true) {
 					if (genironbutton1 == false) {
 						btn4 = document.createElement("BUTTON");
-						btn4.innerHTML = "Gain 1 Iron Ore";
+						btn4.innerHTML = "Gain 1 Iron";
 						divmakeiron.appendChild(btn4);
 						bt4 = divmakeiron.getElementsByTagName("BUTTON")[0];
 						onclick4 = document.createAttribute("onclick");
@@ -281,7 +290,7 @@
 				if (gencopperbutton == true) {
 					if (gencopperbutton1 == false) {
 						btn5 = document.createElement("BUTTON");
-						btn5.innerHTML = "Gain 1 Copper Ore";
+						btn5.innerHTML = "Gain 1 Copper";
 						divmakecopper.appendChild(btn5);
 						bt5 = divmakecopper.getElementsByTagName("BUTTON")[0];
 						onclick5 = document.createAttribute("onclick");
@@ -326,12 +335,12 @@
 			}
 			function ironOre() {
 				iron++;
-				diviron.innerHTML = "Iron Ore: " + iron;
+				diviron.innerHTML = "Iron: " + iron;
 				update()
 			}
 			function copperOre() {
 				copper++;
-				divcopper.innerHTML = "Copper Ore: " + copper;
+				divcopper.innerHTML = "Copper: " + copper;
 				update()
 			}
 			function rubber() {
@@ -351,7 +360,7 @@
 				ironvalue = iron * 2;
 				coins = coins + ironvalue;
 				iron = iron - iron;
-				diviron.innerHTML = "Iron Ore: " + iron;
+				diviron.innerHTML = "Iron: " + iron;
 				divcoins.innerHTML = "Coins: " + coins;
 				update()
 			}
@@ -359,7 +368,7 @@
 				coppervalue = copper * 5;
 				coins = coins + coppervalue;
 				copper = copper - copper;
-				divcopper.innerHTML = "Copper Ore: " + copper;
+				divcopper.innerHTML = "Copper: " + copper;
 				divcoins.innerHTML = "Coins: " + coins;
 				update()
 			}
