@@ -350,9 +350,21 @@
 						sellcopperbutton = true;
 					}
 				}
+				if (rubberCanSell == true) {
+					if (sellrubberbutton == false) {
+						btn10 = document.createElement("BUTTON");
+						btn10.innerHTML = "Sell Rubber";
+						divsellrubber.appendChild(btn10);
+						bt10 = divsellrubber.getElementsByTagName("BUTTON")[0];
+						onclick10 = document.createAttribute("onclick");
+						onclick10.value = "sellRubber()";
+						bt10.setAttributeNode(onclick10);
+						sellrubberbutton = true;
+					}
+				}
 				ironvalue = iron * 2;
 				coppervalue = copper * 5;
-				coalvalue = coal * 0.5;
+				coalvalue = coal * 1;
 				save()
 			}
 			function coalOre() {
@@ -376,7 +388,7 @@
 				update()
 			}
 			function sellCoal() {
-				coalvalue = coal * 0.5;
+				coalvalue = coal * 1;
 				coins = coins + coalvalue;
 				coal = coal - coal;
 				divcoal.innerHTML = "Coal: " + coal;
