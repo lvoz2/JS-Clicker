@@ -242,6 +242,15 @@
 				update()
 			}
 			function update() {
+				if (coins > 39) {
+					readyiron = true;
+				}
+				if (coins > 999) {
+					readyrubber = true;
+				}
+				if (coins > 199) {
+					readycopper = true;
+				}
 				if (genironbutton == true) {
 					diviron.innerHTML = "Iron: " + iron;
 				}
@@ -266,7 +275,7 @@
 						sellcoalbutton = true;
 					}
 				}
-				if (coins > 39) {
+				if (readyiron == true) {
 					if (makeironbutton == false) {
 						if (makeironbuttonclickedsuccess == false) {
 							makeironbutton = true;
@@ -280,7 +289,7 @@
 						}
 					}
 				}
-				if (coins > 999) {
+				if (readyrubber == true) {
 					if (makerubberbutton == false) {
 						if (makerubberbuttonclickedsuccess == false) {
 							makerubberbutton = true;
@@ -294,7 +303,7 @@
 						}
 					}
 				}
-				if (coins > 199) {
+				if (readyrubber == true) {
 					if (makecopperbutton == false) {
 						if (makecopperbuttonclickedsuccess == false) {
 							makecopperbutton = true;
