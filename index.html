@@ -257,7 +257,19 @@
 						bt3.setAttributeNode(onclick3);
 					}
 				}
-				if (coins > 109) {
+				if (coins > 299) {
+					if (makerubberbutton == false) {
+						makerubberbutton = true;
+						btn8 = document.createElement("BUTTON");
+						btn8.innerHTML = "Unlock Rubber Production: 1500 Coins";
+						divmakerubber.appendChild(btn8);
+						bt8 = divmakerubber.getElementsByTagName("BUTTON")[0];
+						onclick8 = document.createAttribute("onclick");
+						onclick8.value = "boughtRubberProduction()";
+						bt8.setAttributeNode(onclick8);
+					}
+				}
+				if (coins > 99) {
 					if (makecopperbutton == false) {
 						makecopperbutton = true;
 						btn7 = document.createElement("BUTTON");
