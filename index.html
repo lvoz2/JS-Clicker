@@ -510,10 +510,11 @@
 			function savetoLS(key, value) {
 				lssave = btoa(value);
 				localStorage.setItem(key, lssave);
+			}
 			function savetofile() {
 				savetoLS('coins', coins);
 				savetoLS('coal', coal);
-				savetoLS('iron' iron);
+				savetoLS('iron', iron);
 				savetoLS('copper', copper);
 				savetoLS('rubber', rubber);
 				savetoLS('genrubberbutton', genrubberbutton);
