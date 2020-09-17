@@ -77,7 +77,7 @@
 			<nav>
 			</nav>
 		</div>
-		<button class="button1" id="btn" onclick="start()"><span>Click to Start</span></button>
+		<button class="button1" id="btn" onclick="ready()"><span>Click to Start</span></button>
 		<div id="sellcoal"></div>
 		<div id="makeiron"></div>
 		<div id="selliron"></div>
@@ -169,7 +169,7 @@
 				savetoLS('readyrubber', readyrubber);
 				savetoLS('save', 2);
 			}
-			function start() {
+			function ready() {
 				savefile = localStorage.getItem("save");
 				if (savefile != "2") {
 					alternate()
