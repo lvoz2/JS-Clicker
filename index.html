@@ -356,25 +356,13 @@
 				}
 				if (gencopperbutton == true) {
 					if (gencopperbutton1 == false) {
-						btn5 = document.createElement("BUTTON");
-						btn5.innerHTML = "Gain 1 Copper";
-						divmakecopper.appendChild(btn5);
-						bt5 = divmakecopper.getElementsByTagName("BUTTON")[0];
-						onclick5 = document.createAttribute("onclick");
-						onclick5.value = "copperOre()";
-						bt5.setAttributeNode(onclick5);
+						divmakecopper.innerHTML = "<button onclick="copperOre()">Gain 1 Copper</button>
 						gencopperbutton1 = true;
 					}
 				}
 				if (genrubberbutton == true) {
 					if (genrubberbutton1 == false) {
-						btn9 = document.createElement("BUTTON");
-						btn9.innerHTML = "Gain 1 Rubber";
-						divmakerubber.appendChild(btn9);
-						bt9 = divmakerubber.getElementsByTagName("BUTTON")[0];
-						onclick9 = document.createAttribute("onclick");
-						onclick9.value = "rubberUp()";
-						bt9.setAttributeNode(onclick9);
+						divmakerubber.innerHTML = "<button onclick="rubberUp()">Gain 1 Rubber</button>";
 						genrubberbutton1 = true;
 					}
 				}
