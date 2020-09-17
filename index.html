@@ -145,30 +145,6 @@
 			var ironfile;
 			var copperfile;
 			var rubberfile;
-			function savetoLS(key, value) {
-				lssave = btoa(value);
-				localStorage.setItem(key, lssave);
-			function savetofile() {
-				savetoLS('coins', coins);
-				savetoLS('coal', coal);
-				savetoLS('iron' iron);
-				savetoLS('copper', copper);
-				savetoLS('rubber', rubber);
-				savetoLS('genrubberbutton', genrubberbutton);
-				savetoLS('gencopperbutton', gencopperbutton);
-				savetoLS('genironbutton', genironbutton);
-				savetoLS('coalCanSell', coalCanSell);
-				savetoLS('ironCanSell', ironCanSell);
-				savetoLS('copperCanSell', copperCanSell);
-				savetoLS('rubbberCanSell', rubberCanSell);
-				savetoLS('makeironbutton', makeironbutton);
-				savetoLS('makecopperbutton', makecopperbutton);
-				savetoLS('makerubberbutton', makerubberbutton);
-				savetoLS('readyiron', readyiron);
-				savetoLS('readycopper', readycopper);
-				savetoLS('readyrubber', readyrubber);
-				savetoLS('save', 2);
-			}
 			function ready() {
 				savefile = localStorage.getItem("save");
 				if (savefile != "2") {
@@ -526,6 +502,30 @@
 					divcoins.innerHTML = "Coins: " + coins;
 					update()
 				}
+			}
+			function savetoLS(key, value) {
+				lssave = btoa(value);
+				localStorage.setItem(key, lssave);
+			function savetofile() {
+				savetoLS('coins', coins);
+				savetoLS('coal', coal);
+				savetoLS('iron' iron);
+				savetoLS('copper', copper);
+				savetoLS('rubber', rubber);
+				savetoLS('genrubberbutton', genrubberbutton);
+				savetoLS('gencopperbutton', gencopperbutton);
+				savetoLS('genironbutton', genironbutton);
+				savetoLS('coalCanSell', coalCanSell);
+				savetoLS('ironCanSell', ironCanSell);
+				savetoLS('copperCanSell', copperCanSell);
+				savetoLS('rubbberCanSell', rubberCanSell);
+				savetoLS('makeironbutton', makeironbutton);
+				savetoLS('makecopperbutton', makecopperbutton);
+				savetoLS('makerubberbutton', makerubberbutton);
+				savetoLS('readyiron', readyiron);
+				savetoLS('readycopper', readycopper);
+				savetoLS('readyrubber', readyrubber);
+				savetoLS('save', 2);
 			}
 		</script>
 	</body>
