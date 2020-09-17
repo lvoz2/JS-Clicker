@@ -150,6 +150,7 @@
 			var rubberfile;
 			function gameStart() {
 				savefile = localStorage.getItem("save");
+				savefile = atob(savefile);
 				if (savefile != "2") {
 					alternate()
 				}
