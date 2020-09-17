@@ -128,6 +128,9 @@
 			var copperCanSell;
 			var divmakecopper = document.getElementById("makecopper");
 			var divsellcopper = document.getElementById("sellcopper");
+			var divbuyiron = document.getElementById("buyiron");
+			var divbuycopper = document.getElementById("buycopper");
+			var divbuyrubber = document.getElementById("buyrubber");
 			var makerubberbutton;
 			var genrubberbutton;
 			var genrubberbutton1;
@@ -297,8 +300,8 @@
 							makeironbutton = true;
 							btn3 = document.createElement("BUTTON");
 							btn3.innerHTML = "Unlock Iron Production: 200 Coins";
-							divmakeiron.appendChild(btn3);
-							bt3 = divmakeiron.getElementsByTagName("BUTTON")[0];
+							divbuyiron.appendChild(btn3);
+							bt3 = divbuyiron.getElementsByTagName("BUTTON")[0];
 							onclick3 = document.createAttribute("onclick");
 							onclick3.value = "boughtIronProduction()";
 							bt3.setAttributeNode(onclick3);
@@ -311,8 +314,8 @@
 							makerubberbutton = true;
 							btn8 = document.createElement("BUTTON");
 							btn8.innerHTML = "Unlock Rubber Production: 3000 Coins";
-							divmakerubber.appendChild(btn8);
-							bt8 = divmakerubber.getElementsByTagName("BUTTON")[0];
+							divbuyrubber.appendChild(btn8);
+							bt8 = divbuyrubber.getElementsByTagName("BUTTON")[0];
 							onclick8 = document.createAttribute("onclick");
 							onclick8.value = "boughtRubberProduction()";
 							bt8.setAttributeNode(onclick8);
@@ -325,8 +328,8 @@
 							makecopperbutton = true;
 							btn7 = document.createElement("BUTTON");
 							btn7.innerHTML = "Unlock Copper Production: 1000 Coins";
-							divmakecopper.appendChild(btn7);
-							bt7 = divmakecopper.getElementsByTagName("BUTTON")[0];
+							divbuycopper.appendChild(btn7);
+							bt7 = divbuycopper.getElementsByTagName("BUTTON")[0];
 							onclick7 = document.createAttribute("onclick");
 							onclick7.value = "boughtCopperProduction()";
 							bt7.setAttributeNode(onclick7);
@@ -466,7 +469,7 @@
 				if (coins > 199) {
 					genironbutton = true;
                                         makeironbuttonclickedsuccess = true;
-					divmakeiron.removeChild(divmakeiron.childNodes[0]);
+					divbuyiron.removeChild(divbuyiron.childNodes[0]);
 					coins = coins - 200;
 					divcoins.innerHTML = "Coins: " + coins;
 					update()
@@ -479,7 +482,7 @@
 				if (coins > 999) {
 					gencopperbutton = true;
                                         makecopperbuttonclickedsuccess = true;
-					divmakecopper.removeChild(divmakecopper.childNodes[0]);
+					divbuycopper.removeChild(divbuycopper.childNodes[0]);
 					coins = coins - 1000;
 					divcoins.innerHTML = "Coins: " + coins;
 					update()
@@ -492,7 +495,7 @@
 				if (coins > 2999) {
 					genrubberbutton = true;
                                         makerubberbuttonclickedsuccess = true;
-					divmakerubber.removeChild(divmakerubber.childNodes[0]);
+					divbuyrubber.removeChild(divbuyrubber.childNodes[0]);
 					coins = coins - 3000;
 					divcoins.innerHTML = "Coins: " + coins;
 					update()
