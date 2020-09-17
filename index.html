@@ -145,44 +145,35 @@
 			var ironfile;
 			var copperfile;
 			var rubberfile;
-			function savefile() {
-				coinsave = btoa(coins);
-				coalsave = btoa(coal);
-				ironsave = btoa(iron);
-				coppersave = btoa(copper);
-				rubbersave = btoa(rubber);
-				genrubberbuttonsave = btoa(genrubberbutton);
-				gencopperbuttonsave = btoa(gencopperbutton);
-				genironbuttonsave = btoa(genironbutton);
-				coalCanSellsave = btoa(coalCanSell);
-				ironCanSellsave = btoa(ironCanSell);
-				copperCanSellsave = btoa(copperCanSell);
-				rubberCanSellsave = btoa(rubberCanSell);
-				makeironbuttonsave = btoa(makeironbuttonclickedsuccess);
-				makecopperbuttonsave = btoa(makecopperbuttonclickedsuccess);
-				makerubberbuttonsave = btoa(makerubberbuttonclickedsuccess);
+			function savetoLS(key, value) {
+				lssave = btoa(value);
+				localStorage.setItem(key, lssave);
+			function savetofile() {
+				savetoLS('coins', coins);
+				savetoLS('coal', coal);
+				savetoLS('iron' iron);
+				savetoLS('copper', copper);
+				savetoLS('rubber', rubber);
+				savetoLS('genrubberbutton', genrubberbutton);
+				savetoLS('gencopperbutton', gencopperbutton);
+				savetoLS('genironbutton', genironbutton);
+				savetoLS('coalCanSell', coalCanSell);
+				savetoLS('ironCanSell', ironCanSell);
+				savetoLS('copperCanSell', copperCanSell);
+				savetoLS('rubbberCanSell', rubberCanSell);
+				savetoLS('makeironbutton', makeironbutton);
+				savetoLS('makecopperbutton', makecopperbutton);
+				savetoLS('makerubberbutton', makerubberbutton);
+				savetoLS('readyiron', readyiron);
+				savetoLS('readycopper', readycopper);
+				savetoLS('readyrubber', readyrubber);
 				readyironsave = btoa(readyiron);
 				readycoppersave = btoa(readycopper);
 				readyrubbersave = btoa(readyrubber);
-				localStorage.setItem('coins', coinsave);
-				localStorage.setItem('coal', coalsave);
-				localStorage.setItem('iron', ironsave);
-				localStorage.setItem('copper', coppersave);
-				localStorage.setItem('rubber', rubbersave);
-				localStorage.setItem('genrubberbutton', genrubberbuttonsave);
-				localStorage.setItem('gencopperbutton', gencopperbuttonsave);
-				localStorage.setItem('genironbutton', genironbuttonsave);
-				localStorage.setItem('coalCanSell', coalCanSellsave);
-				localStorage.setItem('ironCanSell', ironCanSellsave);
-				localStorage.setItem('copperCanSell', copperCanSellsave);
-				localStorage.setItem('rubberCanSell', rubberCanSellsave);
-				localStorage.setItem('makeironbutton', makeironbuttonsave);
-				localStorage.setItem('makecopperbutton', makecopperbuttonsave);
-				localStorage.setItem('makerubberbutton', makerubberbuttonsave);
 				localStorage.setItem('readyiron', readyironsave);
 				localStorage.setItem('readycopper', readycoppersave);
 				localStorage.setItem('readyrubber', readyrubbersave);
-				localStorage.setItem('save', 2);
+				savetoLS('save', 2);
 			}
 			function start() {
 				savefile = localStorage.getItem("save");
@@ -449,7 +440,7 @@
 				ironvalue = iron * 4;
 				coppervalue = copper * 10;
 				coalvalue = coal * 1;
-				savefile()
+				savetofile()
 			}
 			function coalOre() {
 				coal++;
