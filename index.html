@@ -11,6 +11,35 @@
 		</script>
 		<title>Click This</title>
 		<style>
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #333;
+				position: fixed;
+				top: 0;
+				width: 100%;
+			}
+			li {
+				float: left;
+			}
+			li a {
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+			li a:hover:not(.active) {
+				background-color: #111;
+			}
+			.active {
+				background-color: #4CAF50;
+			}
+			.load {
+				text-align: center;
+			}
 			button1:focus {outline:0;}
 			button:focus {outline:0;}
 			body {
@@ -74,11 +103,15 @@
 	</head>
 	<body>
 		<div id="nav">
-			<nav>
-			</nav>
+			<ul>
+				<li><a class="active" href="">Resources</a></li>
+				<li><a href="">Research</a></li>
+				<li><a href="">Space</a></li>
+				<li><a href=""></a></li>
+			</ul>
 		</div>
 		<div id="btn">
-		<button class="button1" onclick="gameStart()"><span>Click to Start</span></button>
+			<p class="load">Loading...</p>
 		</div>
 		<div id="makecoal"></div>
 		<div id="sellcoal"></div>
@@ -118,6 +151,10 @@
 			var makeironbutton;
 			var coalCanSell;
 			var btn1;
+			var workers;
+			var miners;
+			var scientists;
+			var financial;
 			var readyiron;
 			var readycopper;
 			var readyrubber;
@@ -154,6 +191,7 @@
 			var ironfile;
 			var copperfile;
 			var rubberfile;
+			setTimeout(gamestart(), 5000);
 			function gameStart() {
 				savefile = localStorage.getItem("save");
 				savefile = atob(savefile);
