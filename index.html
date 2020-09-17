@@ -147,13 +147,13 @@
 			var copperfile;
 			var rubberfile;
 			function start() {
-				savefile = localStorage.getItem('save');
-				if (savefile != 2) {
+				savefile = localStorage.getItem("save");
+				if (savefile != "2") {
 					alternate()
-                                }
-				if (savefile == 2) {
-                                	find()
-                                }
+				}
+				if (savefile == "2") {
+					find()
+				}
 			}
 			function find() {
 				coinfile = localStorage.getItem('coins');
