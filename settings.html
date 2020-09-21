@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>I. Stellar & Co. - Settings</title>
+		<style>
+			ul {
+				list-style-type: none;
+				margin: 0px;
+				padding: 0;
+				overflow: hidden;
+				background-color: #333;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				font-weight: normal;
+			}
+			li {
+				float: left;
+			}
+			li a {
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+			li a:hover:not(.active) {
+				background-color: #111;
+			}
+			.active {
+				background-color: #1A72E9;
+			}
+			.load {
+				text-align: center;
+			}
+			button1:focus {outline:0;}
+			button:focus {outline:0;}
+			body {
+				color: #1A72E9;
+				font-weight: 1000;
+				font-family: sans-serif;
+				position: relative;
+				left: -8px;
+			}
+			button {
+				background-color: #1A72E9;
+				color: white;
+				margin: 5px;
+				transition-duration: 0.5s;
+				border-radius: 12px;
+				border: 2px solid #1A72E9;
+				padding: 10px 15px;
+			}
+			button:hover {
+				background-color: white;
+				color: #1A72E9;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.button1 {
+				background-color: #1A72E9;
+				color: white;
+				margin: 5px;
+				transition-duration: 0.5s;
+				border-radius: 12px;
+				border: 2px solid #1A72E9;
+				padding: 10px 15px;
+			}
+			.button1:hover {
+				background-color: white;
+				color: #1A72E9;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.button1 span {
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition-duration: 0.5s;
+			}
+			.button1 span:after {
+				content: '\00bb';
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				right: -20px;
+			}
+
+			.button1:hover span {
+				padding-right: 25px;
+				transition-duration: 0.5s;
+			}
+
+			.button1:hover span:after {
+				opacity: 1;
+				right: 0;
+			}
+			.game {
+				top: 50px;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+    		<div id="nav">
+			<ul>
+				<li><a href="/JS-Clicker/index.html">Resources</a></li>
+				<li><a href="/JS-Clicker/research.html">Research</a></li>
+				<li><a class="active" href="/JS-Clicker/space.html">Space</a></li>
+				<li style="float:right"><a href="/JS-Clicker/achievements.html">Achievements</a></li>
+				<li style="float:right"><a href="/JS-Clicker/settings.html">Settings</a></li>
+				<li style="float:right"><a href="#about">Join the Discord!</a></li>
+			</ul>
+		</div>
+	</body>
+</html>
