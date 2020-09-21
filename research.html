@@ -11,22 +11,33 @@
 		</script>
 		<title>I. Stellar & Co. - Research</title>
 		<style>
-			.column {
-				padding: 10px;
-				column-count: 2;
+			.sidenav {
+				height: 100%;
+				width: 30%;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				background-color: #111;
+				overflow-x: hidden;
+				padding-top: 20px;
 			}
-			.column.side {
-				float: left;
-				column-width: 30%;
+			.sidenav a {
+				padding: 6px 6px 6px 32px;
+				text-decoration: none;
+				font-size: 25px;
+				color: #818181;
+				display: block;
 			}
-			.column.middle {
-				float: right;
-				column-width: 65%;
+			.sidenav a:hover {
+				color: #f1f1f1;
 			}
-			.row:after {
-				content: "";
-				display: table;
-				clear: both;
+			.main {
+				margin-left: 32%; /* Same as the width of the sidenav */
+			}
+			@media screen and (max-height: 450px) {
+				.sidenav {padding-top: 15px;}
+				.sidenav a {font-size: 18px;}
 			}
 			* {
 				box-sizing: border-box;
@@ -142,6 +153,12 @@
 				<li style="float:right"><a href="#about">Settings</a></li>
 				<li style="float:right"><a href="#about">Join the Discord!</a></li>
 			</ul>
+		</div>
+		<div class="sidenav">
+			<p onclick="">About</p>
+			<p onclick="">Services</p>
+			<p onclick="">Clients</p>
+			<p onclick="">Contact</p>
 		</div>
 		<div class="game">
 			<div class="row">
