@@ -211,7 +211,9 @@
 			var ironfile;
 			var copperfile;
 			var rubberfile;
-			setTimeout(gameStart(), 10000);
+			function doStart() {
+				setTimeout(gameStart(), 10000);
+			}
 			function gameStart() {
 				savefile = localStorage.getItem("save");
 				savefile = atob(savefile);
@@ -281,6 +283,7 @@
 				makerubberbutton = false;
 				load()
 			}
+			doStart()
 			function alternate() {
 				coal = 0;
 				coins = 0;
