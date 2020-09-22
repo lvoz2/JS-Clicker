@@ -211,6 +211,13 @@
 			var ironfile;
 			var copperfile;
 			var rubberfile;
+			function check() {
+				coalvisible = document.getElementById("coal").innerHTML.value;
+				currentcoal = "Coal: " + coal;
+				if (coalvisible != currentcoal) {
+					alternate()
+				}
+			}
 			function doStart() {
 				setTimeout(gameStart(), 10000);
 				console.log("Started");
