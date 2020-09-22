@@ -226,8 +226,10 @@
 				ironvisible = document.getElementById("iron").innerHTML;
 				currentiron = "Iron: " + iron;
 				if (ironvisible != currentiron) {
-					reset()
-					console.log("Resetting...");
+					if (makeironbuttonclickedsuccess == true) {
+						reset()
+						console.log("Resetting...");
+					}
 				}
 			}
 			function doStart() {
