@@ -215,25 +215,45 @@
 				coalvisible = document.getElementById("coal").innerHTML;
 				currentcoal = "Coal: " + coal;
 				if (coalvisible != currentcoal) {
-					alternate()
+					reset()
 					console.log("Resetting...");
 				}
 				coinsvisible = document.getElementById("coins").innerHTML;
 				currentcoins = "Coins: " + coins;
 				if (coinsvisible != currentcoins) {
-					alternate()
+					reset()
 					console.log("Resetting...");
 				}
 				ironvisible = document.getElementById("iron").innerHTML;
 				currentiron = "Iron: " + iron;
 				if (ironvisible != currentiron) {
-					alternate()
+					reset()
 					console.log("Resetting...");
 				}
 			}
 			function doStart() {
 				setTimeout(gameStart(), 10000);
 				console.log("Started");
+			}
+			function reset() {
+				localStorage.clear()
+				btn.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
+				divcopper.innerHTML = "";
+				divrubber.innerHTML = "";
+				divmakeiron.innerHTML = "";
+				divcoins.innerHTML = "Coins: 0";
+				divcoal.innerHTML = "Coal: 0";
+				divmakecopper.innerHTML = "";
+				divsellcopper.innerHTML = "";
+				divbuyiron.innerHTML = "";
+				divbuycopper.innerHTML = "";
+				divbuyrubber.innerHTML = "";
+				divmakerubber.innerHTML = "";
+				divsellrubber.innerHTML = "";
+				divselliron.innerHTML = "";
+				diviron.innerHTML = "";
+				divsellcoal.innerHTML = "";
+				alternate()
 			}
 			function gameStart() {
 				savefile = localStorage.getItem("save");
