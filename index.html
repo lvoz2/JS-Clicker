@@ -316,6 +316,14 @@
 				genironbutton1 = false;
 				load()
 			}
+			function coalAuto() {
+				if (coalMiners != 0) {
+					coal = coal + 1;
+				}
+				divcoal = "Coal: " + coal;
+				coalSpeed = 1000 / coalMiners;
+				setTimeout(coalAuto, coalSpeed); 
+			}
 			function load() {
 				btn.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
 				divcoal.innerHTML = "Coal: " + coal;
