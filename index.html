@@ -216,6 +216,19 @@
 				currentcoal = "Coal: " + coal;
 				if (coalvisible != currentcoal) {
 					alternate()
+					console.log("Resetting...");
+				}
+				coinsvisible = document.getElementById("coins").innerHTML;
+				currentcoins = "Coins: " + coins;
+				if (coinsvisible != currentcoins) {
+					alternate()
+					console.log("Resetting...");
+				}
+				ironvisible = document.getElementById("iron").innerHTML;
+				currentiron = "Iron: " + iron;
+				if (ironvisible != currentiron) {
+					alternate()
+					console.log("Resetting...");
 				}
 			}
 			function doStart() {
