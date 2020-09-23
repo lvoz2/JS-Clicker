@@ -212,6 +212,9 @@
 			var ironfile;
 			var copperfile;
 			var rubberfile;
+			$(document).ready(function(){
+				doStart()
+			})
 			function check() {
 				coalvisible = document.getElementById("coal").innerHTML;
 				currentcoal = "Coal: " + coal;
@@ -327,7 +330,6 @@
 				makerubberbutton = false;
 				load()
 			}
-			doStart()
 			function alternate() {
 				coal = 0;
 				coins = 0;
