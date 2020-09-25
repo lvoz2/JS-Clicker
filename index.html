@@ -236,6 +236,23 @@
 						console.log("Resetting...");
 					}
 				}
+				coppervisible = document.getElementById("copper").innerHTML;
+				currentcopper = "Copper: " + copper;
+				if (coppervisible != currentcopper) {
+					if (makecopperbuttonclickedsuccess == true) {
+						reset()
+						console.log("Resetting...");
+					}
+				}
+				rubbervisible = document.getElementById("rubber").innerHTML;
+				currentrubber = "Rubber: " + rubber;
+				if (rubbervisible != currentrubber) {
+					if (makerubberbuttonclickedsuccess == true) {
+						reset()
+						console.log("Resetting...");
+					}
+				}
+				setTimeout(check(), 10)
 			}
 			function doStart() {
 				setTimeout(gameStart(), 10000);
