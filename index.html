@@ -153,7 +153,6 @@
 		<script>
 			var btn = document.getElementById("btn");
 			var x;
-			var check = setInterval(check(), 10);
 			var rubbervalue;
 			var copper = 0;
 			var sellrubberbutton;
@@ -214,6 +213,7 @@
 			var rubberfile;
 			$(document).ready(function(){
 				doStart()
+				var check = setInterval(check(), 10);
 			})
 			function check() {
 				console.error("Checking.........")
