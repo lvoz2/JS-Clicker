@@ -118,6 +118,9 @@
 	</head>
 	<body>
 		<div id="container">
+			<div id="load">
+				<img class="load" height="100%" width="100% href="https://lvoz2.github.io/JS-Clicker/I.%20Stellar%20&%20Co.%20-%20Loading.jpg" alt="Loading..."></img>
+			</div>
 			<div id="nav">
 				<ul>
 					<li><a class="active" href="/JS-Clicker/index.html">Resources</a></li>
@@ -129,9 +132,7 @@
 				</ul>
 			</div>
 			<div id="Game" class="game">
-				<div id="btn">
-					<p class="load">Loading...</p>
-				</div>
+				<div id="btn"></div>
 				<div id="makecoal"></div>
 				<div id="sellcoal"></div>
 				<div id="buyiron"></div>
@@ -160,6 +161,7 @@
 			var makecopperbuttonclickedsuccess;
 			var makerubberbuttonclickedsuccess;
 			var coppervalue;
+			var divload = document.getElementById("load");
 			var divcopper = document.getElementById("copper");
 			var divrubber = document.getElementById("rubber");
 			var divmakeiron = document.getElementById("makeiron");
@@ -279,6 +281,7 @@
 			}
 			function gameStart() {
 				savefile = localStorage.getItem("save");
+				divload.innerHTML = "";
 				savefile = atob(savefile);
 				if (savefile != "2") {
 					alternate()
