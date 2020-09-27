@@ -213,7 +213,6 @@
 			var rubberfile;
 			$(document).ready(function(){
 				doStart()
-				var checking = setInterval(check, 10);
 			})
 			function check() {
 				coalvisible = document.getElementById("coal").innerHTML;
@@ -388,6 +387,7 @@
 			}
 			function load() {
 				btn.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
+				var checking = setInterval(check, 10);
 				divcoal.innerHTML = "Coal: " + coal;
 				divcoins.innerHTML = "Coins: " + coins;
 				update()
