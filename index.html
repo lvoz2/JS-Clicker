@@ -114,14 +114,6 @@
 				<img class="load" height="100%" width="100%" src="https://lvoz2.github.io/JS-Clicker/I.%20Stellar%20&%20Co.%20-%20Loading.jpg" alt="Loading..."></img>
 			</div>
 			<div id="nav">
-				<ul>
-					<li><a class="active" href="/JS-Clicker/index.html">Resources</a></li>
-					<li><a href="/JS-Clicker/research.html">Research</a></li>
-					<li><a href="/JS-Clicker/space.html">Space</a></li>
-					<li style="float:right"><a href="/JS-Clicker/achievements.html">Achievements</a></li>
-					<li style="float:right"><a href="/JS-Clicker/settings.html">Settings</a></li>
-					<li style="float:right"><a href="https://discord.gg/4zvyXpS">Join the Discord!</a></li>
-				</ul>
 			</div>
 			<div id="Game" class="game">
 				<div id="btn"></div>
@@ -274,6 +266,7 @@
 			function gameStart() {
 				savefile = localStorage.getItem("save");
 				divload.innerHTML = "";
+				divnav.innerHTML = '<ul><li><a class="active" href="/JS-Clicker/index.html">Resources</a></li><li><a href="/JS-Clicker/research.html">Research</a></li><li><a href="/JS-Clicker/space.html">Space</a></li><li style="float:right"><a href="/JS-Clicker/achievements.html">Achievements</a></li><li style="float:right"><a href="/JS-Clicker/settings.html">Settings</a></li><li style="float:right"><a href="https://discord.gg/4zvyXpS">Join the Discord!</a></li></ul>';
 				savefile = atob(savefile);
 				if (savefile != "2") {
 					alternate()
