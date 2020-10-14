@@ -235,6 +235,9 @@
 						reset()
 						console.log("Resetting...");
 					}
+					if (makecopperbuttonclickedsuccess != true)
+						copper = 0;
+					}
 				}
 				rubbervisible = document.getElementById("rubber").innerHTML;
 				currentrubber = "Rubber: " + rubber;
@@ -243,8 +246,12 @@
 						reset()
 						console.log("Resetting...");
 					}
+					if (makerubberbuttonclickedsuccess != true)
+						rubber = 0;
+					}
 				}
 				savetofile()
+				
 			}
 			function doStart() {
 				setTimeout(gameStart, 2500);
