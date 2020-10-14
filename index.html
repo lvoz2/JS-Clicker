@@ -158,6 +158,7 @@
 			var divcoins = document.getElementById("coins");
 			var divcoal = document.getElementById("coal");
 			var coal = 0;
+			var checking;
 			var sellcopperbutton;
 			var genironbutton1;
 			var genironbutton;
@@ -392,7 +393,7 @@
 			}
 			function load() {
 				btn.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
-				var checking = setInterval(check, 10);
+				checking = setInterval(check, 10);
 				divcoal.innerHTML = "Coal: " + coal;
 				divcoins.innerHTML = "Coins: " + coins;
 				update()
