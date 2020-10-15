@@ -130,7 +130,7 @@
 				opacity: 1;
 				right: 0;
 			}
-			#Game {
+			.Game {
 				position: relative;
 				top: 46px;
 			}
@@ -141,8 +141,6 @@
 			<div id="load">
 				<img class="load" height="100%" width="100%" src="https://lvoz2.github.io/JS-Clicker/I.%20Stellar%20&%20Co.%20-%20Loading.jpg" alt="Loading..."></img>
 			</div>
-			<div id="nav">
-			</div>
 			<div class="sidenav">
 				<img src="/JS-Clicker/favicon.ico" height="46px" width="auto" alt="Logo">
 				<p onclick="">About</p>
@@ -150,25 +148,29 @@
 				<p onclick="">Clients</p>
 				<p onclick="">Contact</p>
 			</div>
-			<div id="Game" class="main">
-				<div id="btn"></div>
-				<div id="makecoal"></div>
-				<div id="sellcoal"></div>
-				<div id="buyiron"></div>
-				<div id="makeiron"></div>
-				<div id="selliron"></div>
-				<div id="buycopper"></div>
-				<div id="makecopper"></div>
-				<div id="sellcopper"></div>
-				<div id="buyrubber"></div>
-				<div id="makerubber"></div>
-				<div id="sellrubber"></div>
-				<div id="coal"></div>
-				<div id="iron"></div>
-				<div id="copper"></div>
-				<div id="rubber"></div>
-				<div id="coins"></div>
-			</div>
+			<div class="main">
+				<div id="nav">
+				</div>
+				<div id="Game" class="game">
+					<div id="btn"></div>
+					<div id="makecoal"></div>
+					<div id="sellcoal"></div>
+					<div id="buyiron"></div>
+					<div id="makeiron"></div>
+					<div id="selliron"></div>
+					<div id="buycopper"></div>
+					<div id="makecopper"></div>
+					<div id="sellcopper"></div>
+					<div id="buyrubber"></div>
+					<div id="makerubber"></div>
+					<div id="sellrubber"></div>
+					<div id="coal"></div>
+					<div id="iron"></div>
+					<div id="copper"></div>
+					<div id="rubber"></div>
+					<div id="coins"></div>
+				</div>
+		</div>
 		</div>
 		<script>
 			var btn = document.getElementById("btn");
