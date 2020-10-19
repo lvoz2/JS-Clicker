@@ -155,16 +155,15 @@
 			</div>
 			<div class="sidenav">
 				<img src="/JS-Clicker/favicon.ico" class="logo" height="46px" width="auto" alt="Logo">
-				<p onclick="">Coal</p>
-				<p onclick="">Services</p>
-				<p onclick="">Clients</p>
-				<p onclick="">Contact</p>
+				<p onclick="openStone()">Stone</p>
+				<p onclick="openCoal()">Coal</p>
 			</div>
 			<div class="main">
 				<div id="nav">
 				</div>
 				<div id="Game" class="game">
-					<div id="btn"></div>
+					<div id="makestone"></div>
+					<div id="sellstone"></div>
 					<div id="makecoal"></div>
 					<div id="sellcoal"></div>
 					<div id="buyiron"></div>
@@ -176,6 +175,7 @@
 					<div id="buyrubber"></div>
 					<div id="makerubber"></div>
 					<div id="sellrubber"></div>
+					<div id="stone"></div>
 					<div id="coal"></div>
 					<div id="iron"></div>
 					<div id="copper"></div>
@@ -185,15 +185,18 @@
 		</div>
 		</div>
 		<script>
-			var btn = document.getElementById("btn");
+			var divmakecoal = document.getElementById("makecoal");
 			var x;
 			var rubbervalue;
+			var stonevalue;
+			var stone = 0;
 			var copper = 0;
 			var sellrubberbutton;
 			var makeironbuttonclickedsuccess;
 			var makecopperbuttonclickedsuccess;
 			var makerubberbuttonclickedsuccess;
 			var coppervalue;
+			var divstone = document.getElementById("stone");
 			var divload = document.getElementById("load");
 			var divcopper = document.getElementById("copper");
 			var divrubber = document.getElementById("rubber");
@@ -220,6 +223,8 @@
 			var gencopperbutton;
 			var gencopperbutton1;
 			var copperCanSell;
+			var divmakestone = document.getElementById("makestone");
+			var divsellstone = document.getElementById("sellstone");
 			var divmakecopper = document.getElementById("makecopper");
 			var divsellcopper = document.getElementById("sellcopper");
 			var divbuyiron = document.getElementById("buyiron");
@@ -306,7 +311,7 @@
 			}
 			function reset() {
 				localStorage.clear()
-				btn.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
+				divmakecoal.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
 				divcopper.innerHTML = "";
 				divrubber.innerHTML = "";
 				divmakeiron.innerHTML = "";
@@ -435,7 +440,7 @@
 				setTimeout(coalAuto, coalSpeed); 
 			}
 			function load() {
-				btn.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
+				divmakecoal.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
 				checking = setInterval(check, 10);
 				divcoal.innerHTML = "Coal: " + coal;
 				divcoins.innerHTML = "Coins: " + coins;
