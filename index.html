@@ -186,7 +186,7 @@
 					<div id="rubber"></div>
 					<div id="coins"></div>
 				</div>
-		</div>
+			</div>
 		</div>
 		<script>
 			var divmakecoal = document.getElementById("makecoal");
@@ -600,6 +600,18 @@
 				coalvalue = coal * 1;
 				savetofile()
 			}
+			function screenUpdate() {
+				
+			}
+			function openCoal() {
+				resourceVisible = 'coal';
+			}
+			function openStone() {
+				resourceVisible = 'stone';
+			}
+			function openIron() {
+				resourceVisible = 'iron';
+			}
 			function coalOre() {
 				coal++;
 				divcoal.innerHTML = "Coal: " + coal;
@@ -613,6 +625,11 @@
 			function copperOre() {
 				copper++;
 				divcopper.innerHTML = "Copper: " + copper;
+				update()
+			}
+			function mineStone() {
+				stone++;
+				divstone.innerHTML = "Stone: " + stone;
 				update()
 			}
 			function rubberUp() {
@@ -698,6 +715,7 @@
 			function savetofile() {
 				save = "2";
 				savetoLS('coins', coins);
+				savetoLS('stone', stone);
 				savetoLS('coal', coal);
 				savetoLS('iron', iron);
 				savetoLS('copper', copper);
@@ -705,6 +723,7 @@
 				savetoLS('genrubberbutton', genrubberbutton);
 				savetoLS('gencopperbutton', gencopperbutton);
 				savetoLS('genironbutton', genironbutton);
+				savetoLS('stoneCanSell', stoneCanSell);
 				savetoLS('coalCanSell', coalCanSell);
 				savetoLS('ironCanSell', ironCanSell);
 				savetoLS('copperCanSell', copperCanSell);
