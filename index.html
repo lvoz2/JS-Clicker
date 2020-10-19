@@ -166,6 +166,10 @@
 				<div id="nav">
 				</div>
 				<div id="Game" class="game">
+					<h2 id="resourcetype"></h2>
+					<p id="resourcedefine"></p>
+					<button id="gainresource" onclick="mineStone()>Gain 1</button>
+					<h3 id="storagetype"></h3>
 					<div id="makestone"></div>
 					<div id="sellstone"></div>
 					<div id="makecoal"></div>
@@ -602,16 +606,29 @@
 				savetofile()
 			}
 			function screenUpdate() {
-				
+				if (resourceVisible == 'coal') {
+					divmake.innerHTML
+				}
 			}
 			function openCoal() {
 				resourceVisible = 'coal';
+				screenUpdate()
 			}
 			function openStone() {
 				resourceVisible = 'stone';
+				screenUpdate()
 			}
 			function openIron() {
 				resourceVisible = 'iron';
+				screenUpdate()
+			}
+			function openCopper() {
+				resourceVisible = 'copper';
+				screenUpdate()
+			}
+			function openRubber() {
+				resourceVisible = 'rubber';
+				screenUpdate()
 			}
 			function coalOre() {
 				coal++;
