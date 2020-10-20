@@ -432,7 +432,7 @@
 				if (coalMiners != 0) {
 					coal = coal + 1;
 				}
-				divcoal = "Coal: " + coal;
+				divcoal.innerHTML = "Coal: " + coal;
 				coalSpeed = 1000 / coalMiners;
 				setTimeout(coalAuto, coalSpeed); 
 			}
@@ -620,7 +620,7 @@
 			}
 			function coalOre() {
 				coal++;
-				divcoal.innerHTML = "Coal: " + coal;
+				d.innerHTML = "Coal: " + coal;
 				update()
 			}
 			function ironOre() {
