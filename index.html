@@ -169,6 +169,9 @@
 					<h2 id="resourcetype"></h2>
 					<p id="resourcedefine"></p>
 					<button id="gainresource" onclick="gainResource()">Gain 1</button>
+					<h3 id="selltype"></h3>
+					<p id="selldefine"></p>
+					<button id="sellresource" onclick="sellResource()">Sell</button>
 					<h3 id="storagetype"></h3>
 					<p id="storagedefine"></p>
 					<button id="gainstorage" onclick="gainStorage()"></button>
@@ -176,7 +179,15 @@
 			</div>
 		</div>
 		<script>
-			var divmakecoal = document.getElementById("makecoal");
+			var h2resourcetype = document.getElementById("resourcetype");
+			var h3selltype = document.getElementById("selltype");
+			var h3storagetype = document.getElementById("storagetype");
+			var presourcedefine = document.getElementById("resourcedefine");
+			var pselldefine = document.getElementById("selldefine");
+			var pstoragedefine = document.getElementById("storagedefine");
+			var btngainresource = document.getElementById("gainresource");
+			var btnsellresource = document.getElementById("sellresource");
+			var btngainstorage = document.getElementById("gainstorage");
 			var x;
 			var rubbervalue;
 			var stonevalue;
@@ -187,13 +198,8 @@
 			var makecopperbuttonclickedsuccess;
 			var makerubberbuttonclickedsuccess;
 			var coppervalue;
-			var divstone = document.getElementById("stone");
+			var resourceVisible = 'stone';
 			var divload = document.getElementById("load");
-			var divcopper = document.getElementById("copper");
-			var divrubber = document.getElementById("rubber");
-			var divmakeiron = document.getElementById("makeiron");
-			var divcoins = document.getElementById("coins");
-			var divcoal = document.getElementById("coal");
 			var coal = 0;
 			var checking;
 			var sellcopperbutton;
@@ -215,10 +221,7 @@
 			var gencopperbutton;
 			var gencopperbutton1;
 			var copperCanSell;
-			var divmakestone = document.getElementById("makestone");
-			var divsellstone = document.getElementById("sellstone");
-			var divmakecopper = document.getElementById("makecopper");
-			var divsellcopper = document.getElementById("sellcopper");
+			var divsellstone = document.getElementById("sellresource");
 			var divbuyiron = document.getElementById("buyiron");
 			var divbuycopper = document.getElementById("buycopper");
 			var divbuyrubber = document.getElementById("buyrubber");
