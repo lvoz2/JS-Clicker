@@ -245,6 +245,17 @@
 			var ironfile;
 			var copperfile;
 			var rubberfile;
+			function gainResource() {
+				if (resourceVisible == 'coal') {
+					coalOre()
+				}
+				if (resourceVisible == 'stone') {
+					mineStone()
+				}
+				if (resourceVisible == 'iron') {
+					ironOre()
+				}
+			}
 			$(document).ready(function(){
 				doStart()
 			})
