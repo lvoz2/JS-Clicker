@@ -156,7 +156,7 @@
 			<div class="sidenav">
 				<img src="/JS-Clicker/favicon.ico" class="logo" height="46px" width="auto" alt="Logo">
 				<div id="openstone">
-					<p onclick="openStone()">Stone</p>
+					<p onclick="openStone()" id="stone">Stone</p>
 				</div>
 				<div id="opencoal">
 					<p onclick="openCoal()">Coal</p>
@@ -191,6 +191,11 @@
 			var btnsellresource = document.getElementById("sellresource");
 			var btngainstorage = document.getElementById("gainstorage");
 			var x;
+			var pstone = document.getElementById("stone")
+			var pcoal = document.getElementById("coal")
+			var piron = document.getElementById("iron")
+			var pcopper = document.getElementById("copper")
+			var prubber = document.getElementById("rubber")
 			var rubbervalue;
 			var stonevalue;
 			var stone = 0;
@@ -594,6 +599,7 @@
 				savetofile()
 			}
 			function screenUpdate() {
+				pstone.innerHTML = 'Stone' + '     ' + stonespeed + '     ' + '/sec' + '     ' + stone;
 				if (resourceVisible == 'stone') {
 					resourcetype.innerHTML = 'Stone';
 				}
