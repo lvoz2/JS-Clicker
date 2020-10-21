@@ -594,8 +594,20 @@
 				savetofile()
 			}
 			function screenUpdate() {
+				if (resourceVisible == 'stone') {
+					resourcetype.innerHTML = 'Stone';
+				}
 				if (resourceVisible == 'coal') {
-					resourcetype.innerHTML = 'Coal
+					resourcetype.innerHTML = 'Coal';
+				}
+				if (resourceVisible == 'iron') {
+					resourcetype.innerHTML = 'Iron';
+				}
+				if (resourceVisible == 'rubber') {
+					resourcetype.innerHTML = 'Rubber';
+				}
+				if (resourceVisible == 'copper') {
+					resourcetype.innerHTML = 'Copper';
 				}
 			}
 			function openCoal() {
