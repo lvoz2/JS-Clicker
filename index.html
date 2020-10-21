@@ -617,6 +617,7 @@
 				if (resourceVisible == 'copper') {
 					resourcetype.innerHTML = 'Copper';
 				}
+				update()
 			}
 			function openCoal() {
 				resourceVisible = 'coal';
@@ -640,28 +641,23 @@
 			}
 			function coalOre() {
 				coal++;
-				d.innerHTML = "Coal: " + coal;
-				update()
+				screenUpdate()
 			}
 			function ironOre() {
 				iron++;
-				diviron.innerHTML = "Iron: " + iron;
-				update()
+				screenUpdate()
 			}
 			function copperOre() {
 				copper++;
-				divcopper.innerHTML = "Copper: " + copper;
-				update()
+				screenUpdate()
 			}
 			function mineStone() {
 				stone++;
-				divstone.innerHTML = "Stone: " + stone;
-				update()
+				screenUpdate()
 			}
 			function rubberUp() {
 				rubber++;
-				divrubber.innerHTML = "Rubber: " + rubber;
-				update()
+				screenUpdate()
 			}
 			function sellCoal() {
 				coalvalue = coal * 1;
