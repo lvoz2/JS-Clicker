@@ -417,9 +417,7 @@
 				setTimeout(coalAuto, coalSpeed); 
 			}
 			function load() {
-				pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 42px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
-				pcoal.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 51.5px;"></span>' + coalspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coal;
-				pstone.innerHTML = 'Stone' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stonespeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stone;
+				screenUpdate()
 				update()
 			}
 			function update() {
@@ -515,6 +513,7 @@
 			function screenUpdate() {
 				pstone.innerHTML = 'Stone' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stonespeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stone;
 				pcoal.innerHTML = 'Coal' + '<span style="display: inline-block; margin-left: 51.5px;"></span>' + coalspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coal;
+				pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 42px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
 				if (resourceVisible == 'stone') {
 					resourcetype.innerHTML = 'Stone';
 				}
