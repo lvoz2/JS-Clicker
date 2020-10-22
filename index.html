@@ -601,7 +601,7 @@
 				savetofile()
 			}
 			function screenUpdate() {
-				pstone.innerHTML = '<pre>' + 'Stone' + '    ' + stonespeed + '/sec' + '    ' + stone + '</pre>';
+				pstone.innerHTML = 'Stone' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stonespeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stone;
 				if (resourceVisible == 'stone') {
 					resourcetype.innerHTML = 'Stone';
 				}
