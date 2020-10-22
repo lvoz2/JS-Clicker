@@ -258,8 +258,8 @@
 					coalvalue = coal * 1;
 					coins = coins + coalvalue;
 					coal = 0;
-					pcoal.innerHTML = 'Coal' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coalspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coal;
-					pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
+					pcoal.innerHTML = 'Coal' + '<span style="display: inline-block; margin-left: 51.5px;"></span>' + coalspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coal;
+					pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 42px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
 					screenUpdate()
 				}
 				if (resourceVisible == 'stone') {
@@ -267,7 +267,7 @@
 					coins = coins + stonevalue;
 					stone = 0;
 					pstone.innerHTML = 'Stone' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stonespeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stone;
-					pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
+					pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 42px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
 					screenUpdate()
 				}
 				if (resourceVisible == 'iron') {
@@ -275,7 +275,7 @@
 					coins = coins + coalvalue;
 					coal = coal - coal;
 					piron.innerHTML = 'Iron' + '<span style="display: inline-block; margin-left: 40px;"></span>' + ironspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + iron;
-					pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
+					pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 42px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
 					screenUpdate()
 				}
 			}
@@ -563,6 +563,7 @@
 			}
 			function screenUpdate() {
 				pstone.innerHTML = 'Stone' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stonespeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stone;
+				pcoal.innerHTML = 'Coal' + '<span style="display: inline-block; margin-left: 51.5px;"></span>' + coalspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coal;
 				if (resourceVisible == 'stone') {
 					resourcetype.innerHTML = 'Stone';
 				}
