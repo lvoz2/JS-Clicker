@@ -282,55 +282,6 @@
 			$(document).ready(function(){
 				doStart()
 			})
-			function check() {
-				coalvisible = document.getElementById("coal").innerHTML;
-				currentcoal = "Coal: " + coal;
-				if (coalvisible != currentcoal) {
-					reset()
-					console.log("Resetting...");
-				}
-				coinsvisible = document.getElementById("coins").innerHTML;
-				currentcoins = "Coins: " + coins;
-				if (coinsvisible != currentcoins) {
-					reset()
-					console.log("Resetting...");
-				}
-				ironvisible = document.getElementById("iron").innerHTML;
-				currentiron = "Iron: " + iron;
-				if (ironvisible != currentiron) {
-					if (makeironbuttonclickedsuccess == true) {
-						reset()
-						console.log("Resetting...");
-					}
-					if (makeironbuttonclickedsuccess != true) {
-						iron = 0;
-					}
-				}
-				coppervisible = document.getElementById("copper").innerHTML;
-				currentcopper = "Copper: " + copper;
-				if (coppervisible != currentcopper) {
-					if (makecopperbuttonclickedsuccess == true) {
-						reset()
-						console.log("Resetting...");
-					}
-					if (makecopperbuttonclickedsuccess != true) {
-						copper = 0;
-					}
-				}
-				rubbervisible = document.getElementById("rubber").innerHTML;
-				currentrubber = "Rubber: " + rubber;
-				if (rubbervisible != currentrubber) {
-					if (makerubberbuttonclickedsuccess == true) {
-						reset()
-						console.log("Resetting...");
-					}
-					if (makerubberbuttonclickedsuccess != true) {
-						rubber = 0;
-					}
-				}
-				savetofile()
-				
-			}
 			function doStart() {
 				setTimeout(gameStart, 2500);
 				console.log("Started");
@@ -467,8 +418,9 @@
 			}
 			function load() {
 				checking = setInterval(check, 10);
-				divcoal.innerHTML = "Coal: " + coal;
-				divcoins.innerHTML = "Coins: " + coins;
+				pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 42px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
+				pcoal.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 51.5px;"></span>' + coalspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coal;
+				pstone.innerHTML = 'Stone' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stonespeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stone;
 				update()
 			}
 			function update() {
