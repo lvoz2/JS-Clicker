@@ -155,11 +155,14 @@
 			</div>
 			<div class="sidenav">
 				<img src="/JS-Clicker/favicon.ico" class="logo" height="46px" width="auto" alt="Logo">
+				<div id="opencoins">
+					<p onclick="openCoins()" id="coins">Coins</p>
+				</div>
 				<div id="openstone">
 					<p onclick="openStone()" id="stone">Stone</p>
 				</div>
 				<div id="opencoal">
-					<p onclick="openCoal()">Coal</p>
+					<p onclick="openCoal()" id="coal">Coal</p>
 				</div>
 			</div>
 			<div class="main">
@@ -191,6 +194,7 @@
 			var btnsellresource = document.getElementById("sellresource");
 			var btngainstorage = document.getElementById("gainstorage");
 			var x;
+			var pcoins = document.getElementById("coins")
 			var pstone = document.getElementById("stone")
 			var pcoal = document.getElementById("coal")
 			var piron = document.getElementById("iron")
@@ -257,6 +261,32 @@
 					ironOre()
 				}
 			}
+			function sellResource() {
+				if (resourceVisible == 'coal') {
+					coalvalue = coal * 1;
+					coins = coins + coalvalue;
+					coal = 0;
+					pcoal.innerHTML = 'Coal' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coalspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coal;
+					pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
+					screenUpdate()
+				}
+				if (resourceVisible == 'stone') {
+					stonevalue = stone * 1;
+					coins = coins + stonevalue;
+					stone = 0;
+					pcoal.innerHTML = 'Stone' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stonespeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + stone;
+					pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
+					screenUpdate()
+				}
+				if (resourceVisible == 'iron') {
+					coalvalue = coal * 1;
+					coins = coins + coalvalue;
+					coal = coal - coal;
+					pcoal.innerHTML = 'Iron' + '<span style="display: inline-block; margin-left: 40px;"></span>' + ironspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + iron;
+					pcoins.innerHTML = 'Coins' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 40px;"></span>' + coins;
+					screenUpdate()
+				}
+			}
 			$(document).ready(function(){
 				doStart()
 			})
@@ -316,11 +346,11 @@
 			function reset() {
 				localStorage.clear()
 				divmakecoal.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
-				divcopper.innerHTML = "";
-				divrubber.innerHTML = "";
+				pcopper.innerHTML = "";
+				prubber.innerHTML = "";
 				divmakeiron.innerHTML = "";
-				divcoins.innerHTML = "Coins: 0";
-				divcoal.innerHTML = "Coal: 0";
+				pcoins.innerHTML = "Coins: 0";
+				pcoal.innerHTML = "Coal: 0";
 				divmakecopper.innerHTML = "";
 				divsellcopper.innerHTML = "";
 				divbuyiron.innerHTML = "";
