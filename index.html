@@ -206,7 +206,7 @@
 			var copper = 0;
 			var stonespeed = 0;
 			var coalspeed = 0;
-			var sellrubberbutton;
+			var coinsspeed = 0;
 			var makeironbuttonclickedsuccess;
 			var makecopperbuttonclickedsuccess;
 			var makerubberbuttonclickedsuccess;
@@ -214,11 +214,9 @@
 			var resourceVisible = 'stone';
 			var coal = 0;
 			var checking;
-			var sellcopperbutton;
 			var genironbutton1;
 			var genironbutton;
 			var makeironbutton;
-			var coalCanSell;
 			var btn1;
 			var workers;
 			var miners;
@@ -228,20 +226,14 @@
 			var readycopper;
 			var readyrubber;
 			var rubber = 0;
-			var stoneCanSell;
 			var makecopperbutton;
 			var gencopperbutton;
 			var gencopperbutton1;
-			var copperCanSell;
 			var makerubberbutton;
 			var genrubberbutton;
 			var genrubberbutton1;
-			var rubberCanSell;
-			var sellironbutton;
-			var sellcoalbutton;
 			var coins = 0;
 			var iron = 0;
-			var ironCanSell;
 			var coalvalue;
 			var bt1;
 			var onclick1;
@@ -499,21 +491,6 @@
 				if (genrubberbutton == true) {
 					divrubber.innerHTML = "Rubber: " + rubber;
 				}
-				if (coal > 9) {
-					coalCanSell = true;
-				}
-				if (coalCanSell == true) {
-					if (sellcoalbutton == false) {
-						btn1 = document.createElement("BUTTON");
-						btn1.innerHTML = "Sell Coal";
-						divsellcoal.appendChild(btn1);
-						bt1 = divsellcoal.getElementsByTagName("BUTTON")[0];
-						onclick1 = document.createAttribute("onclick");
-						onclick1.value = "sellCoal()";
-						bt1.setAttributeNode(onclick1);
-						sellcoalbutton = true;
-					}
-				}
 				if (readyiron == true) {
 					if (makeironbutton == false) {
 						if (makeironbuttonclickedsuccess == false) {
@@ -556,15 +533,6 @@
 						}
 					}
 				}
-				if (iron > 9) {
-					ironCanSell = true;
-				}
-				if (copper > 9) {
-					copperCanSell = true;
-				}
-				if (rubber > 9) {
-					rubberCanSell = true;
-				}
 				if (genironbutton == true) {
 					if (genironbutton1 == false) {
 						btn4 = document.createElement("BUTTON");
@@ -587,42 +555,6 @@
 					if (genrubberbutton1 == false) {
 						divmakerubber.innerHTML = '<button onclick="rubberUp()">Gain 1 Rubber</button>';
 						genrubberbutton1 = true;
-					}
-				}
-				if (ironCanSell == true) {
-					if (sellironbutton == false) {
-						btn2 = document.createElement("BUTTON");
-						btn2.innerHTML = "Sell Iron";
-						divselliron.appendChild(btn2);
-						bt2 = divselliron.getElementsByTagName("BUTTON")[0];
-						onclick2 = document.createAttribute("onclick");
-						onclick2.value = "sellIron()";
-						bt2.setAttributeNode(onclick2);
-						sellironbutton = true;
-					}
-				}
-				if (copperCanSell == true) {
-					if (sellcopperbutton == false) {
-						btn6 = document.createElement("BUTTON");
-						btn6.innerHTML = "Sell Copper";
-						divsellcopper.appendChild(btn6);
-						bt6 = divsellcopper.getElementsByTagName("BUTTON")[0];
-						onclick6 = document.createAttribute("onclick");
-						onclick6.value = "sellCopper()";
-						bt6.setAttributeNode(onclick6);
-						sellcopperbutton = true;
-					}
-				}
-				if (rubberCanSell == true) {
-					if (sellrubberbutton == false) {
-						btn10 = document.createElement("BUTTON");
-						btn10.innerHTML = "Sell Rubber";
-						divsellrubber.appendChild(btn10);
-						bt10 = divsellrubber.getElementsByTagName("BUTTON")[0];
-						onclick10 = document.createAttribute("onclick");
-						onclick10.value = "sellRubber()";
-						bt10.setAttributeNode(onclick10);
-						sellrubberbutton = true;
 					}
 				}
 				ironvalue = iron * 4;
