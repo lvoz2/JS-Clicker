@@ -466,7 +466,6 @@
 				setTimeout(coalAuto, coalSpeed); 
 			}
 			function load() {
-				divmakecoal.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
 				checking = setInterval(check, 10);
 				divcoal.innerHTML = "Coal: " + coal;
 				divcoins.innerHTML = "Coins: " + coins;
@@ -707,11 +706,6 @@
 				savetoLS('genrubberbutton', genrubberbutton);
 				savetoLS('gencopperbutton', gencopperbutton);
 				savetoLS('genironbutton', genironbutton);
-				savetoLS('stoneCanSell', stoneCanSell);
-				savetoLS('coalCanSell', coalCanSell);
-				savetoLS('ironCanSell', ironCanSell);
-				savetoLS('copperCanSell', copperCanSell);
-				savetoLS('rubberCanSell', rubberCanSell);
 				savetoLS('makeironbuttonclickedsuccess', makeironbuttonclickedsuccess);
 				savetoLS('makecopperbuttonclickedsuccess', makecopperbuttonclickedsuccess);
 				savetoLS('makerubberbuttonclickedsuccess', makerubberbuttonclickedsuccess);
