@@ -148,8 +148,14 @@
 				margin-left: auto;
 				margin-right: auto;
 			}
-			td {
-				width: 33.3%;
+			.tdleft {
+				text-align: left;
+			}
+			.tdcentre {
+				text-align: center;
+			}
+			.tdright {
+				text-align: right;
 			}
 		</style>
 	</head>
@@ -161,37 +167,37 @@
 			<div class="sidenav">
 				<img src="/JS-Clicker/favicon.ico" class="logo" height="46px" width="auto" alt="Logo">
 				<div class="sidebarbuttons">
-					<table id="sidebardata">
+					<table id="sidebardata" width="100%">
 						<tr onclick="openCoins()">
-							<td>
+							<td class="tdleft">
 								<p>Coins</p>
 							</td>
-							<td>
+							<td class="tdcentre">
 								<p><span id="coinsspeed"></span>/sec</p>
 							</td>
-							<td>
+							<td class="tdright">
 								<p id="coins"></p>
 							</td>
 						</tr>
 						<tr onclick="openStone()">
-							<td>
+							<td class="tdleft">
 								<p>Stone</p>
 							</td>
-							<td>
+							<td class="tdcentre">
 								<p><span id="stonespeed"></span>/sec</p>
 							</td>
-							<td>
+							<td class="tdright">
 								<p id="stone"></p>
 							</td>
 						</tr>
 						<tr onclick="openCoal()">
-							<td>
+							<td class="tdleft">
 								<p>Coal</p>
 							</td>
-							<td>
+							<td class="tdcentre">
 								<p><span id="coalspeed"></span>/sec</p>
 							</td>
-							<td>
+							<td class="tdright">
 								<p id="coal"></p>
 							</td>
 						</tr>	
