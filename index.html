@@ -146,6 +146,16 @@
 				margin-left: auto;
 				margin-right: auto;
 			}
+			.column {
+				float: left;
+				width: 33.33%;
+				padding: 10px;
+			}
+			.row:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
 		</style>
 	</head>
 	<body>
@@ -155,6 +165,17 @@
 			</div>
 			<div class="sidenav">
 				<img src="/JS-Clicker/favicon.ico" class="logo" height="46px" width="auto" alt="Logo">
+				<div class="row">
+					<div class="column" style="float: left;">
+						<p onclick="openCoins()" id="coinsname">Coins</p>
+						<p onclick="openStone()" id="stonename">Stone</p>
+						<p onclick="openCoal()" id="coalname">Coal</p>
+					</div>
+					<div class="column" style="float: right;">
+					</div>
+					<div class="column" style="display: flex; justify-content: center;">
+					</div>
+				</div>
 				<div id="opencoins">
 					<p onclick="openCoins()" id="coins">Coins</p>
 				</div>
