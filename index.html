@@ -526,8 +526,8 @@
 				savetofile()
 			}
 			function screenUpdate() {
-				pstone.innerHTML = '<span style="float: left;" id="sidebarstonename">Stone</span>' + '<span style="float: right;" id="sidebarstonenumber">' + stone + '</span>' + '<span style="display: flex; justify-content: center;" id="sidebarstonespeed">' + stonespeed + '/sec</span>';
-				pcoins.innerHTML = '<span style="float: left;" id="sidebarcoinsname">Coins</span>' + '<span style="float: right;" id="sidebarcoinsnumber">' + coins + '</span>' + '<span style="display: flex; justify-content: center;" id="sidebarcoinsspeed">' + coinsspeed + '/sec</span>';
+				pstone.innerHTML = '<span style="float: left;" id="sidebarstonename">Stone</span>' + stonespeed + '/sec' + '<span style="display: inline-block; margin-left: 21%;"></span>' + stone;
+				pcoins.innerHTML = '<span style="float: left;" id="sidebarcoinsname">Coins</span>' + '<span style="float: right;" id="sidebarcoinsnumber">' + coins + '</span>' + coinsspeed + '/sec' + '<span style="display: inline-block; margin-left: 21%;"></span>' + coins;
 				pcoal.innerHTML = '<span style="float: left;" id="sidebarcoalname">Coal</span>' + '<span style="float: right;" id="sidebarcoalnumber">' + coal + '</span>' + '<span style="display: flex; justify-content: center;" id="sidebarcoalspeed">' + coalspeed + '/sec</span>';
 				if (resourceVisible == 'stone') {
 					resourcetype.innerHTML = 'Stone';
