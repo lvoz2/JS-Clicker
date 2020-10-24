@@ -159,25 +159,37 @@
 				<img src="/JS-Clicker/favicon.ico" class="logo" height="46px" width="auto" alt="Logo">
 				<div class="sidebarbuttons">
 					<table id="sidebardata">
-						<tr>
+						<tr onclick="openCoins()">
 							<td>
-								<div id="opencoins">
-									<p onclick="openCoins()" id="coins">Coins</p>
-								</div>
+								<p>Coins</p>
+							</td>
+							<td>
+								<p><span id="coinsspeed"></span>/sec</p>
+							</td>
+							<td>
+								<p id="coins"></p>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="openStone()">
 							<td>
-								<div id="openstone">
-									<p onclick="openStone()" id="stone">Stone</p>
-								</div>
+								<p>Stone</p>
+							</td>
+							<td>
+								<p><span id="stonespeed"></span>/sec</p>
+							</td>
+							<td>
+								<p id="stone"></p>
 							</td>
 						</tr>
-						<tr>
+						<tr onclick="openCoal()">
 							<td>
-								<div id="opencoal">
-									<p onclick="openCoal()" id="coal">Coal</p>
-								</div>
+								<p>Coal</p>
+							</td>
+							<td>
+								<p><span id="coalspeed"></span>/sec</p>
+							</td>
+							<td>
+								<p id="coal"></p>
 							</td>
 						</tr>	
 					</table>
