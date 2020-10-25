@@ -209,15 +209,21 @@
 				<div id="nav">
 				</div>
 				<div id="Game" class="game">
-					<h2 id="resourcetype"></h2>
-					<p id="resourcedefine"></p>
-					<button id="gainresource" onclick="gainResource()">Gain 1</button>
-					<h3 id="selltype"></h3>
-					<p id="selldefine"></p>
-					<button id="sellresource" onclick="sellResource()">Sell</button>
-					<h3 id="storagetype"></h3>
-					<p id="storagedefine"></p>
-					<button id="gainstorage" onclick="gainStorage()"></button>
+					<div id="coinstab">
+						<div id="buyiron">
+						</div>
+					</div>
+					<div id="resourcestab">
+						<h2 id="resourcetype"></h2>
+						<p id="resourcedefine"></p>
+						<button id="gainresource" onclick="gainResource()">Gain 1</button>
+						<h3 id="selltype"></h3>
+						<p id="selldefine"></p>
+						<button id="sellresource" onclick="sellResource()">Sell</button>
+						<h3 id="storagetype"></h3>
+						<p id="storagedefine"></p>
+						<button id="gainstorage" onclick="gainStorage()"></button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -282,6 +288,7 @@
 			var ironfile;
 			var copperfile;
 			var rubberfile;
+			var divbuyiron = document.getElementById("buyiron");
 			function gainResource() {
 				if (resourceVisible == 'coal') {
 					coalOre()
@@ -477,13 +484,7 @@
 					if (makeironbutton == false) {
 						if (makeironbuttonclickedsuccess == false) {
 							makeironbutton = true;
-							btn3 = document.createElement("BUTTON");
-							btn3.innerHTML = "Unlock Iron Production: 200 Coins";
-							divbuyiron.appendChild(btn3);
-							bt3 = divbuyiron.getElementsByTagName("BUTTON")[0];
-							onclick3 = document.createAttribute("onclick");
-							onclick3.value = "boughtIronProduction()";
-							bt3.setAttributeNode(onclick3);
+							divbuyiron.innerHTML = '<button onclick="boughtIronProduction()">Unlock Iron Production: 200 Coins</button>';
 						}
 					}
 				}
@@ -565,24 +566,37 @@
 				}
 				update()
 			}
+			function openCoins() {
+				document.getElementById("coinstab").style.visibility = "visible";
+				document.getElementById("resourcestab").style.visibility = "hidden";
+			}
+			function closeCoins() {
+				document.getElementById("coinstab").style.visibility = "hidden";
+				document.getElementById("resourcestab").style.visibility = "visible";
+			}
 			function openCoal() {
 				resourceVisible = 'coal';
+				closeCoins()
 				screenUpdate()
 			}
 			function openStone() {
 				resourceVisible = 'stone';
+				closeCoins()
 				screenUpdate()
 			}
 			function openIron() {
 				resourceVisible = 'iron';
+				closeCoins()
 				screenUpdate()
 			}
 			function openCopper() {
 				resourceVisible = 'copper';
+				closeCoins()
 				screenUpdate()
 			}
 			function openRubber() {
 				resourceVisible = 'rubber';
+				closeCoins()
 				screenUpdate()
 			}
 			function coalOre() {
