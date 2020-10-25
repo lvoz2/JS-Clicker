@@ -529,30 +529,6 @@
 						}
 					}
 				}
-				if (genironbutton == true) {
-					if (genironbutton1 == false) {
-						btn4 = document.createElement("BUTTON");
-						btn4.innerHTML = "Gain 1 Iron";
-						divmakeiron.appendChild(btn4);
-						bt4 = divmakeiron.getElementsByTagName("BUTTON")[0];
-						onclick4 = document.createAttribute("onclick");
-						onclick4.value = "ironOre()";
-						bt4.setAttributeNode(onclick4);
-						genironbutton1 = true;
-					}
-				}
-				if (gencopperbutton == true) {
-					if (gencopperbutton1 == false) {
-						divmakecopper.innerHTML = '<button onclick="copperOre()">Gain 1 Copper</button>';
-						gencopperbutton1 = true;
-					}
-				}
-				if (genrubberbutton == true) {
-					if (genrubberbutton1 == false) {
-						divmakerubber.innerHTML = '<button onclick="rubberUp()">Gain 1 Rubber</button>';
-						genrubberbutton1 = true;
-					}
-				}
 				ironvalue = iron * 4;
 				coppervalue = copper * 10;
 				coalvalue = coal * 1;
