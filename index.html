@@ -567,12 +567,12 @@
 				update()
 			}
 			function openCoins() {
-				document.getElementById("coinstab").style.visibility = "visible";
-				document.getElementById("resourcestab").style.visibility = "hidden";
+				document.getElementById("coinstab").style.display = "block";
+				document.getElementById("resourcestab").style.display = "none";
 			}
 			function closeCoins() {
-				document.getElementById("coinstab").style.visibility = "hidden";
-				document.getElementById("resourcestab").style.visibility = "visible";
+				document.getElementById("coinstab").style.display = "none";
+				document.getElementById("resourcestab").style.display = "block";
 			}
 			function openCoal() {
 				resourceVisible = 'coal';
