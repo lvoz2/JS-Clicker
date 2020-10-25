@@ -202,7 +202,7 @@
 								<p id="coal"></p>
 							</td>
 						</tr>	
-						<tr onclick="openIron()" id="triron" style="diplay: none;">
+						<tr onclick="openIron()" id="triron" style="display: none;">
 							<td class="tdleft">
 								<p>Iron</p>
 							</td>
@@ -655,7 +655,7 @@
 				if (coins > 199) {
 					genironbutton = true;
                     makeironbuttonclickedsuccess = true;
-					triron.style.display = "block";
+					triron.style.display = "inline";
 					divbuyiron.removeChild(divbuyiron.childNodes[0]);
 					coins = coins - 200;
 					screenUpdate()
