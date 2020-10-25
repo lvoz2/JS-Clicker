@@ -529,6 +529,9 @@
 						}
 					}
 				}
+				if (makeironbuttonclickedsuccess == true) {
+					triron.style.display = "table-row";
+				}
 				ironvalue = iron * 4;
 				coppervalue = copper * 10;
 				coalvalue = coal * 1;
@@ -631,7 +634,6 @@
 				if (coins > 199) {
 					genironbutton = true;
                     makeironbuttonclickedsuccess = true;
-					triron.style.display = "table-row";
 					divbuyiron.removeChild(divbuyiron.childNodes[0]);
 					coins = coins - 200;
 					screenUpdate()
