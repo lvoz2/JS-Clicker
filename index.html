@@ -472,13 +472,13 @@
 					readycopper = true;
 				}
 				if (genironbutton == true) {
-					diviron.innerHTML = "Iron: " + iron;
+					piron.innerHTML = iron;
 				}
 				if (gencopperbutton == true) {
-					divcopper.innerHTML = "Copper: " + copper;
+					pcopper.innerHTML = copper;
 				}
 				if (genrubberbutton == true) {
-					divrubber.innerHTML = "Rubber: " + rubber;
+					prubber.innerHTML = rubber;
 				}
 				if (readyiron == true) {
 					if (makeironbutton == false) {
@@ -657,11 +657,10 @@
 				}
 				if (coins > 199) {
 					genironbutton = true;
-                                        makeironbuttonclickedsuccess = true;
+                    makeironbuttonclickedsuccess = true;
 					divbuyiron.removeChild(divbuyiron.childNodes[0]);
 					coins = coins - 200;
-					divcoins.innerHTML = "Coins: " + coins;
-					update()
+					screenUpdate()
 				}
 			}
 			function boughtCopperProduction() {
