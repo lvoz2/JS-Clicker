@@ -165,7 +165,7 @@
 			<div id="load">
 				<img class="load" height="100%" width="100%" src="https://lvoz2.github.io/JS-Clicker/I.%20Stellar%20&%20Co.%20-%20Loading.jpg" alt="Loading..."></img>
 			</div>
-			<div class="sidenav" style="display:none;">
+			<div class="sidenav" id="sidenav" style="display:none;">
 				<img src="/JS-Clicker/favicon.ico" class="logo" height="46px" width="auto" alt="Logo">
 				<div class="sidebarbuttons">
 					<table id="sidebardata" width="100%" style="table-layout:fixed;">
@@ -362,7 +362,7 @@
 			function gameStart() {
 				savefile = localStorage.getItem("save");
 				divload.innerHTML = "";
-				document.getElementByClassName("sidenav").style.display = "block";
+				document.getElementById("sidenav").style.display = "block";
 				divnav.innerHTML = '<ul><li><a class="active" href="/JS-Clicker/index.html">Resources</a></li><li><a href="/JS-Clicker/research.html">Research</a></li><li><a href="/JS-Clicker/space.html">Space</a></li><li style="float:right"><a href="/JS-Clicker/achievements.html">Achievements</a></li><li style="float:right"><a href="/JS-Clicker/settings.html">Settings</a></li><li style="float:right"><a href="https://discord.gg/4zvyXpS">Join the Discord!</a></li></ul>';
 				savefile = atob(savefile);
 				if (savefile != "2") {
