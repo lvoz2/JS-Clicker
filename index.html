@@ -174,7 +174,7 @@
 								<p>Coins</p>
 							</td>
 							<td class="tdcentre">
-								<p><span id="coinsspeed"></span>/sec</p>
+								<p><span id="coinsspeed">0</span>/sec</p>
 							</td>
 							<td class="tdright">
 								<p id="coins"></p>
@@ -185,7 +185,7 @@
 								<p>Stone</p>
 							</td>
 							<td class="tdcentre">
-								<p><span id="stonespeed"></span>/sec</p>
+								<p><span id="stonespeed">0</span>/sec</p>
 							</td>
 							<td class="tdright">
 								<p id="stone"></p>
@@ -196,12 +196,23 @@
 								<p>Coal</p>
 							</td>
 							<td class="tdcentre">
-								<p><span id="coalspeed"></span>/sec</p>
+								<p><span id="coalspeed">0</span>/sec</p>
 							</td>
 							<td class="tdright">
 								<p id="coal"></p>
 							</td>
 						</tr>	
+						<tr onclick="openIron()" id="triron" style="diplay: none;">
+							<td class="tdleft">
+								<p>Iron</p>
+							</td>
+							<td class="tdcentre">
+								<p><span id="ironspeed">0</span>/sec</p>
+							</td>
+							<td class="tdright">
+								<p id="iron"></p>
+							</td>
+						</tr>
 					</table>
 				</div>
 			</div>
@@ -240,6 +251,7 @@
 			var btnsellresource = document.getElementById("sellresource");
 			var btngainstorage = document.getElementById("gainstorage");
 			var x;
+			var triron = document.getElementById("triron");
 			var pcoins = document.getElementById("coins")
 			var pstone = document.getElementById("stone")
 			var pcoal = document.getElementById("coal")
@@ -642,6 +654,7 @@
 				if (coins > 199) {
 					genironbutton = true;
                     makeironbuttonclickedsuccess = true;
+					triron.style.display = "block";
 					divbuyiron.removeChild(divbuyiron.childNodes[0]);
 					coins = coins - 200;
 					screenUpdate()
