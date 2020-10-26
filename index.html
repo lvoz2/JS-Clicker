@@ -276,6 +276,8 @@
 			var btngainstorage = document.getElementById("gainstorage");
 			var x;
 			var triron = document.getElementById("triron");
+			var trcopper = document.getElementById("trcopper");
+			var trrubber = document.getElementById("trrubber");
 			var pcoins = document.getElementById("coins")
 			var pstone = document.getElementById("stone")
 			var pcoal = document.getElementById("coal")
@@ -326,6 +328,7 @@
 			var rubberfile;
 			var divbuyiron = document.getElementById("buyiron");
 			var divbuycopper = document.getElementById("buycopper");
+			var divbuyrubber = document.getElementById("buyrubber");
 			function gainResource() {
 				if (resourceVisible == 'coal') {
 					coal++;
@@ -580,6 +583,12 @@
 				}
 				if (makeironbuttonclickedsuccess == true) {
 					triron.style.display = "table-row";
+				}
+				if (makecopperbuttonclickedsuccess == true) {
+					trcopper.style.display = "table-row";
+				}
+				if (makerubberbuttonclickedsuccess == true) {
+					trrubber.style.display = "table-row";
 				}
 				ironvalue = iron * 4;
 				coppervalue = copper * 10;
