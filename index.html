@@ -328,13 +328,24 @@
 			var divbuycopper = document.getElementById("buycopper");
 			function gainResource() {
 				if (resourceVisible == 'coal') {
-					coalOre()
+					coal++;
+					screenUpdate()
 				}
 				if (resourceVisible == 'stone') {
-					mineStone()
+					stone++;
+					screenUpdate()
 				}
 				if (resourceVisible == 'iron') {
-					ironOre()
+					iron++;
+					screenUpdate()
+				}
+				if (resourceVisible == 'copper') {
+					copper++;
+					screenUpdate()
+				}
+				if (resourceVisible == 'rubber') {
+					rubber++;
+					screenUpdate()
 				}
 			}
 			function sellResource() {
@@ -354,6 +365,18 @@
 					ironvalue = iron * 4;
 					coins = coins + ironvalue;
 					iron = iron - iron;
+					screenUpdate()
+				}
+				if (resourceVisible == 'copper') {
+					coppervalue = copper * 10;
+					coins = coins + coppervalue;
+					copper = copper - copper;
+					screenUpdate()
+				}
+				if (resourceVisible == 'rubber') {
+					rubbervalue = rubber * 4;
+					coins = coins + rubbervalue;
+					rubber = rubber - rubber;
 					screenUpdate()
 				}
 			}
@@ -616,42 +639,6 @@
 				resourceVisible = 'rubber';
 				closeCoins()
 				screenUpdate()
-			}
-			function coalOre() {
-				coal++;
-				screenUpdate()
-			}
-			function ironOre() {
-				iron++;
-				screenUpdate()
-			}
-			function copperOre() {
-				copper++;
-				screenUpdate()
-			}
-			function mineStone() {
-				stone++;
-				screenUpdate()
-			}
-			function rubberUp() {
-				rubber++;
-				screenUpdate()
-			}
-			function sellCopper() {
-				coppervalue = copper * 10;
-				coins = coins + coppervalue;
-				copper = copper - copper;
-				divcopper.innerHTML = "Copper: " + copper;
-				divcoins.innerHTML = "Coins: " + coins;
-				update()
-			}
-			function sellRubber() {
-				rubbervalue = rubber * 4;
-				coins = coins + rubbervalue;
-				rubber = rubber - rubber;
-				divrubber.innerHTML = "Rubber: " + rubber;
-				divcoins.innerHTML = "Coins: " + coins;
-				update()
 			}
 			function boughtIronProduction() {
 				if ( coins < 200) {
