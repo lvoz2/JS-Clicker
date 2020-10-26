@@ -649,11 +649,10 @@
 				}
 				if (coins > 999) {
 					gencopperbutton = true;
-                                        makecopperbuttonclickedsuccess = true;
+                    makecopperbuttonclickedsuccess = true;
 					divbuycopper.removeChild(divbuycopper.childNodes[0]);
 					coins = coins - 1000;
-					divcoins.innerHTML = "Coins: " + coins;
-					update()
+					screenUpdate()
 				}
 			}
 			function boughtRubberProduction() {
@@ -662,11 +661,10 @@
 				}
 				if (coins > 2999) {
 					genrubberbutton = true;
-                                        makerubberbuttonclickedsuccess = true;
+                    makerubberbuttonclickedsuccess = true;
 					divbuyrubber.removeChild(divbuyrubber.childNodes[0]);
 					coins = coins - 3000;
-					divcoins.innerHTML = "Coins: " + coins;
-					update()
+					screenUpdate()
 				}
 			}
 			function savetoLS(key, value) {
