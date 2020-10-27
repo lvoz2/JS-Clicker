@@ -1,98 +1,101 @@
-// Save Variables
+function variable() {
+	// Save Variables
 
-// Load Variables
+	// Load Variables
 
-var coinfile;
-var coalfile;
-var ironfile;
-var copperfile;
-var rubberfile;
+	window.coinfile;
+	window.coalfile;
+	window.ironfile;
+	window.copperfile;
+	window.rubberfile;
 
-// Resource Variables
+	// Resource Variables
 
-var resourceVisible = 'stone';
+	window.resourceVisible = 'stone';
 
-// Coins
+	// Coins
 
-var coins = 0;
-var coinsspeed = 0;
-var coinsgatherers = 0;
+	window.coins = 0;
+	window.coinsspeed = 0;
+	window.coinsgatherers = 0;
 
-// Coal
+	// Coal
 
-var coal = 0;
-var coalvalue;
-var coalspeed = 0;
-var coalgatherers = 0;
+	window.coal = 0;
+	window.coalvalue;
+	window.coalspeed = 0;
+	window.coalgatherers = 0;
 
-// Stone
+	// Stone
 
-var stone = 0;
-var stonevalue;
-var stonespeed = 0;
-var stonegatherers = 0;
+	window.stone = 0;
+	window.stonevalue;
+	window.stonespeed = 0;
+	window.stonegatherers = 0;
 
-// Iron
+	// Iron
 
-var iron = 0;
-var ironvalue;
-var ironspeed = 0;
-var irongatherers = 0;
+	window.iron = 0;
+	window.ironvalue;
+	window.ironspeed = 0;
+	window.irongatherers = 0;
 
-// Copper
+	// Copper
 
-var copper = 0;
-var coppervalue;
-var copperspeed = 0;
-var coppergatherers = 0;
+	window.copper = 0;
+	window.coppervalue;
+	window.copperspeed = 0;
+	window.coppergatherers = 0;
 
-// Rubber
+	// Rubber
 
-var rubber = 0;
-var rubbervalue;
-var rubberspeed = 0;
-var rubbergatherers = 0;
+	window.rubber = 0;
+	window.rubbervalue;
+	window.rubberspeed = 0;
+	window.rubbergatherers = 0;
 
-// Button Variables
+	// Button Variables
 
-var makecopperbutton;
-var gencopperbutton;
-var gencopperbutton1;
-var makerubberbutton;
-var genrubberbutton;
-var genrubberbutton1;
-var readyiron;
-var readycopper;
-var readyrubber;
-var genironbutton1;
-var genironbutton;
-var makeironbutton;
-var makeironbuttonclickedsuccess;
-var makecopperbuttonclickedsuccess;
-var makerubberbuttonclickedsuccess;
+	window.makecopperbutton;
+	window.gencopperbutton;
+	window.gencopperbutton1;
+	window.makerubberbutton;
+	window.genrubberbutton;
+	window.genrubberbutton1;
+	window.readyiron;
+	window.readycopper;
+	window.readyrubber;
+	window.genironbutton1;
+	window.genironbutton;
+	window.makeironbutton;
+	window.makeironbuttonclickedsuccess;
+	window.makecopperbuttonclickedsuccess;
+	window.makerubberbuttonclickedsuccess;
 
-// Element Variables
+	// Element Variables
 
-var divbuyiron = document.getElementById("buyiron");
-var divbuycopper = document.getElementById("buycopper");
-var divbuyrubber = document.getElementById("buyrubber");
-var triron = document.getElementById("triron");
-var trcopper = document.getElementById("trcopper");
-var trrubber = document.getElementById("trrubber");
-var pcoins = document.getElementById("coins");
-var pstone = document.getElementById("stone");
-var pcoal = document.getElementById("coal");
-var piron = document.getElementById("iron");
-var pcopper = document.getElementById("copper");
-var prubber = document.getElementById("rubber");
-var divload = document.getElementById("load");
-var divnav = document.getElementById("nav");
-var h2resourcetype = document.getElementById("resourcetype");
-var h3selltype = document.getElementById("selltype");
-var h3storagetype = document.getElementById("storagetype");
-var presourcedefine = document.getElementById("resourcedefine");
-var pselldefine = document.getElementById("selldefine");
-var pstoragedefine = document.getElementById("storagedefine");
-var btngainresource = document.getElementById("gainresource");
-var btnsellresource = document.getElementById("sellresource");
-var btngainstorage = document.getElementById("gainstorage");
+	window.divbuyiron = document.getElementById("buyiron");
+	window.divbuycopper = document.getElementById("buycopper");
+	window.divbuyrubber = document.getElementById("buyrubber");
+	window.triron = document.getElementById("triron");
+	window.trcopper = document.getElementById("trcopper");
+	window.trrubber = document.getElementById("trrubber");
+	window.pcoins = document.getElementById("coins");
+	window.pstone = document.getElementById("stone");
+	window.pcoal = document.getElementById("coal");
+	window.piron = document.getElementById("iron");
+	window.pcopper = document.getElementById("copper");
+	window.prubber = document.getElementById("rubber");
+	window.divload = document.getElementById("load");
+	window.divnav = document.getElementById("nav");
+	window.h2resourcetype = document.getElementById("resourcetype");
+	window.h3selltype = document.getElementById("selltype");
+	window.h3storagetype = document.getElementById("storagetype");
+	window.presourcedefine = document.getElementById("resourcedefine");
+	window.pselldefine = document.getElementById("selldefine");
+	window.pstoragedefine = document.getElementById("storagedefine");
+	window.btngainresource = document.getElementById("gainresource");
+	window.btnsellresource = document.getElementById("sellresource");
+	window.btngainstorage = document.getElementById("gainstorage");
+	gameStart()
+}
