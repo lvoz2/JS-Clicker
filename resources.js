@@ -53,7 +53,7 @@ function sellResource() {
 	}
 }
 $(document).ready(function(){
-	gameStart()
+	variable()
 })
 function reset() {
 	localStorage.clear()
