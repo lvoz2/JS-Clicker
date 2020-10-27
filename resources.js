@@ -181,11 +181,11 @@ function alternate() {
 	load()
 }
 function coalAuto() {
-	if (coalminers != 0) {
+	if (coalgatherers != 0) {
 		coal = coal + 1;
 	}
 	pcoal.innerHTML = "Coal: " + coal;
-	coalSpeed = 100 / coalMiners;
+	coalSpeed = 100 / coalgatherers;
 	setTimeout(coalAuto, coalSpeed); 
 }
 function load() {
