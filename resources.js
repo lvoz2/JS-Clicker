@@ -185,7 +185,7 @@ function coalAuto() {
 		coal = coal + 1;
 	}
 	pcoal.innerHTML = coal;
-	coalSpeed = 100 / coalgatherers;
+	coalSpeed = 1000 / coalgatherers;
 	setTimeout(coalAuto, coalSpeed); 
 }
 function load() {
