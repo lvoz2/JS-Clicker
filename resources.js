@@ -184,7 +184,7 @@ function coalAuto() {
 	if (coalgatherers != 0) {
 		coal = coal + 1;
 	}
-	pcoal.innerHTML = "Coal: " + coal;
+	pcoal.innerHTML = coal;
 	coalSpeed = 100 / coalgatherers;
 	setTimeout(coalAuto, coalSpeed); 
 }
