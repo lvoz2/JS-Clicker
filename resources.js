@@ -181,7 +181,7 @@ function alternate() {
 	load()
 }
 function coalAuto() {
-	if (coalMiners != 0) {
+	if (coalminers != 0) {
 		coal = coal + 1;
 	}
 	pcoal.innerHTML = "Coal: " + coal;
