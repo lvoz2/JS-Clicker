@@ -1,69 +1,3 @@
-var divload = document.getElementById("load");
-var divnav = document.getElementById("nav");
-var h2resourcetype = document.getElementById("resourcetype");
-var h3selltype = document.getElementById("selltype");
-var h3storagetype = document.getElementById("storagetype");
-var presourcedefine = document.getElementById("resourcedefine");
-var pselldefine = document.getElementById("selldefine");
-var pstoragedefine = document.getElementById("storagedefine");
-var btngainresource = document.getElementById("gainresource");
-var btnsellresource = document.getElementById("sellresource");
-var btngainstorage = document.getElementById("gainstorage");
-var x;
-var triron = document.getElementById("triron");
-var trcopper = document.getElementById("trcopper");
-var trrubber = document.getElementById("trrubber");
-var pcoins = document.getElementById("coins")
-var pstone = document.getElementById("stone")
-var pcoal = document.getElementById("coal")
-var piron = document.getElementById("iron")
-var pcopper = document.getElementById("copper")
-var prubber = document.getElementById("rubber")
-var rubbervalue;
-var stonevalue;
-var stone = 0;
-var copper = 0;
-var stonespeed = 0;
-var coalspeed = 0;
-var coinsspeed = 0;
-var makeironbuttonclickedsuccess;
-var makecopperbuttonclickedsuccess;
-var makerubberbuttonclickedsuccess;
-var coppervalue;
-var resourceVisible = 'stone';
-var coal = 0;
-var checking;
-var genironbutton1;
-var genironbutton;
-var makeironbutton;
-var btn1;
-var workers;
-var miners;
-var scientists;
-var financial;
-var readyiron;
-var readycopper;
-var readyrubber;
-var rubber = 0;
-var makecopperbutton;
-var gencopperbutton;
-var gencopperbutton1;
-var makerubberbutton;
-var genrubberbutton;
-var genrubberbutton1;
-var coins = 0;
-var iron = 0;
-var coalvalue;
-var bt1;
-var onclick1;
-var coinfile;
-var coalfile;
-var ironfile;
-var copperfile;
-var rubberfile;
-var divbuyiron = document.getElementById("buyiron");
-var divbuycopper = document.getElementById("buycopper");
-var divbuyrubber = document.getElementById("buyrubber");
 function gainResource() {
 	if (resourceVisible == 'coal') {
 		coal++;
@@ -119,12 +53,8 @@ function sellResource() {
 	}
 }
 $(document).ready(function(){
-	doStart()
+	gameStart()
 })
-function doStart() {
-	setTimeout(gameStart, 2500);
-	console.log("Started");
-}
 function reset() {
 	localStorage.clear()
 	divmakecoal.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
@@ -146,6 +76,7 @@ function reset() {
 	alternate()
 }
 function gameStart() {
+	console.log("Started");
 	savefile = localStorage.getItem("save");
 	divload.innerHTML = "";
 	document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
@@ -253,12 +184,13 @@ function coalAuto() {
 	if (coalMiners != 0) {
 		coal = coal + 1;
 	}
-	divcoal.innerHTML = "Coal: " + coal;
-	coalSpeed = 1000 / coalMiners;
+	pcoal.innerHTML = "Coal: " + coal;
+	coalSpeed = 100 / coalMiners;
 	setTimeout(coalAuto, coalSpeed); 
 }
 function load() {
 	screenUpdate()
+	coalAuto()
 	closeCoins()
 	update()
 }
@@ -419,6 +351,12 @@ function boughtRubberProduction() {
 		divbuyrubber.removeChild(divbuyrubber.childNodes[0]);
 		coins = coins - 3000;
 		screenUpdate()
+	}
+}
+function autoUpdate() {
+	if (coalCanAuto == true) {
+		coalautospeed = coalminers / 100;
+		coal = coal + coalautospeed;
 	}
 }
 function savetoLS(key, value) {
