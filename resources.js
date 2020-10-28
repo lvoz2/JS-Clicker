@@ -177,9 +177,7 @@ function coalAuto() {
 	coalSpeed = toString(coalgatherers / 100);
 	decimalPointCoalSpeed = coalSpeed.indexOf(".");
 	decimalCoalSpeed = coalSpeed.slice(decimalPointCoalSpeed + 1);
-	if (coalhashappened == true) {
-		decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
-	}
+	decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
 	decimalPointCoalSpeed0 = decimalCoalSpeed2.indexOf(".");
 	decimalCoalSpeed0 = coalSpeed.slice(0, decimalPointCoalSpeed0);
 	decimalCoalSpeed1 = decimalCoalSpeed;
