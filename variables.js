@@ -25,6 +25,14 @@ function variable() {
 	window.coalvalue;
 	window.coalspeed = 0;
 	window.coalgatherers = 0;
+	window.coalSpeed;
+	window.decimalPointCoalSpeed;
+	window.decimalCoalSpeed;
+	window.decimalCoalSpeed2;
+	window.decimalPointCoalSpeed0;
+	window.decimalCoalSpeed0;
+	window.decimalCoalSpeed1;
+	window.wholeCoalSpeed;
 
 	// Stone
 
