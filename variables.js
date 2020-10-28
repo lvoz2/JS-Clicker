@@ -31,9 +31,8 @@ function variable() {
 	window.decimalCoalSpeed2;
 	window.decimalPointCoalSpeed0;
 	window.decimalCoalSpeed0;
-	window.decimalCoalSpeed1;
+	window.decimalCoalSpeed1 = "";
 	window.wholeCoalSpeed;
-	window.coalhashappened = false;
 
 	// Stone
 
