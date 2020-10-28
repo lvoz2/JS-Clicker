@@ -174,7 +174,7 @@ function alternate() {
 	load()
 }
 function coalAuto() {
-	coalSpeed = toString(coalgatherers / 100);
+	coalSpeed = toString(coalgatherers / 100.00);
 	decimalPointCoalSpeed = coalSpeed.indexOf(".");
 	decimalCoalSpeed = coalSpeed.slice(decimalPointCoalSpeed + 1);
 	decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
