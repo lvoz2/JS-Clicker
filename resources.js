@@ -91,18 +91,17 @@ function gameStart() {
 	}
 }
 function find() {
+	readyironfile = localStorage.getItem('readyiron');
+	readycopperfile = localStorage.getItem('readycopper');
+	readyrubberfile = localStorage.getItem('readyrubber');
 	coinfile = localStorage.getItem('coins');
 	coalfile = localStorage.getItem('coal');
 	ironfile = localStorage.getItem('iron');
 	copperfile = localStorage.getItem('copper');
 	rubberfile = localStorage.getItem('rubber');
-	coalCanSellfile = localStorage.getItem('coalCanSell');
 	gencopperbuttonfile = localStorage.getItem('gencopperbutton');
-	copperCanSellfile = localStorage.getItem('copperCanSell');
-	rubberCanSellfile = localStorage.getItem('rubberCanSell');
 	genrubberbuttonfile = localStorage.getItem('genrubberbutton');
 	genironbuttonfile = localStorage.getItem('genironbutton');
-	ironCanSellfile = localStorage.getItem('ironCanSell');
 	makeironbuttonclickedsuccessfile = localStorage.getItem('makeironbuttonclickedsuccess');
 	makecopperbuttonclickedsuccessfile = localStorage.getItem('makecopperbuttonclickedsuccess');
 	makerubberbuttonclickedsuccessfile = localStorage.getItem('makerubberbuttonclickedsuccess');
@@ -111,23 +110,21 @@ function find() {
 	ironfile = atob(ironfile);
 	copperfile = atob(copperfile);
 	rubberfile = atob(rubberfile);
-	coalCanSell = atob(coalCanSellfile);
-	copperCanSell = atob(copperCanSellfile);
-	rubberCanSell = atob(rubberCanSellfile);
-	ironCanSell = atob(ironCanSellfile);
 	genironbutton = atob(genironbuttonfile);
 	gencopperbutton = atob(gencopperbuttonfile);
 	genrubberbutton = atob(genrubberbuttonfile);
 	makerubberbuttonclickedsuccess = atob(makerubberbuttonclickedsuccessfile);
 	makeironbuttonclickedsuccess = atob(makeironbuttonclickedsuccessfile);
 	makecopperbuttonclickedsuccess = atob(makecopperbuttonclickedsuccessfile);
-	coalCanSell = (coalCanSell == "true");
-	copperCanSell = (copperCanSell == "true");
-	rubberCanSell = (rubberCanSell == "true");
-	ironCanSell = (ironCanSell == "true");
+	readyiron = atob(readyironfile);
+	readycopper = atob(readycopperfile);
+	readyrubber = atob(readyrubberfile);
 	genironbutton = (genironbutton == "true");
 	gencopperbutton = (gencopperbutton == "true");
 	genrubberbutton = (genrubberbutton == "true");
+	readyiron = (readyiron == "true");
+	readycopper = (readycopper == "true");
+	readyrubber = (readyrubber == "true");
 	makerubberbuttonclickedsuccess = (makerubberbuttonclickedsuccess == "true");
 	makeironbuttonclickedsuccess = (makeironbuttonclickedsuccess == "true");
 	makecopperbuttonclickedsuccess = (makecopperbuttonclickedsuccess == "true");
@@ -155,12 +152,8 @@ function alternate() {
 	iron = 0;
 	copper = 0;
 	rubber = 0;
-	ironCanSell = false;
 	genrubberbutton = false;
-	rubberCanSell = false;
-	copperCanSell = false;
 	gencopperbutton = false;
-	coalCanSell = false;
 	genironbutton = false;
 	sellironbutton = false;
 	sellcoalbutton = false;
