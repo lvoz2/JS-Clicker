@@ -176,12 +176,12 @@ function alternate() {
 function coalAuto() {
 	coalSpeed = toString(coalgatherers / 100);
 	decimalPointCoalSpeed = coalSpeed.indexOf(".");
-	decimalCoalSpeed = slice(decimalPointCoalSpeed + 1);
+	decimalCoalSpeed = coalSpeed.slice(decimalPointCoalSpeed + 1);
 	decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
 	decimalPointCoalSpeed0 = decimalCoalSpeed2.indexOf(".");
-	decimalCoalSpeed0 = slice(0, decimalPointCoalSpeed0);
+	decimalCoalSpeed0 = coalSpeed.slice(0, decimalPointCoalSpeed0);
 	decimalCoalSpeed1 = decimalCoalSpeed;
-	wholeCoalSpeed = parseInt(slice(0, decimalPointCoalSpeed) + decimalCoalSpeed0);
+	wholeCoalSpeed = parseInt(coalSpeed.slice(0, decimalPointCoalSpeed)) + decimalCoalSpeed0;
 	if (coalgatherers != 0) {
 		coal = coal + wholeCoalSpeed;
 	}
