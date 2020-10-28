@@ -181,12 +181,19 @@ function alternate() {
 	load()
 }
 function coalAuto() {
+	coalSpeed = coalgatherers / 100;
+	decimalPointCoalSpeed = coalSpeed.search(".");
+	decimalCoalSpeed = slice(decimalPointCoalSpeed + 1);
+	decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
+	decimalPointCoalSpeed0 = decimalCoalSpeed2.search(".");
+	decimalCoalSpeed0 = slice(0, decimalPointCoalSpeed0);
+	decimalCoalSpeed1 = decimalCoalSpeed;
+	wholeCoalSpeed = slice(0, decimalPointCoalSpeed) + decimalCoalSpeed0;
 	if (coalgatherers != 0) {
-		coal = coal + 1;
+		coal = coal + wholeCoalSpeed;
 	}
 	pcoal.innerHTML = coal;
-	coalSpeed = 1000 / coalgatherers;
-	setTimeout(coalAuto, coalSpeed); 
+	setTimeout(coalAuto, 10);
 }
 function load() {
 	screenUpdate()
