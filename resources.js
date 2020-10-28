@@ -180,7 +180,6 @@ function coalAuto() {
 	if (coalhashappened == true) {
 		decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
 	}
-	decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
 	decimalPointCoalSpeed0 = decimalCoalSpeed2.indexOf(".");
 	decimalCoalSpeed0 = coalSpeed.slice(0, decimalPointCoalSpeed0);
 	decimalCoalSpeed1 = decimalCoalSpeed;
