@@ -182,10 +182,10 @@ function alternate() {
 }
 function coalAuto() {
 	coalSpeed = coalgatherers / 100;
-	decimalPointCoalSpeed = coalSpeed.search(".");
+	decimalPointCoalSpeed = coalSpeed.indexOf(".");
 	decimalCoalSpeed = slice(decimalPointCoalSpeed + 1);
 	decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
-	decimalPointCoalSpeed0 = decimalCoalSpeed2.search(".");
+	decimalPointCoalSpeed0 = decimalCoalSpeed2.indexOf(".");
 	decimalCoalSpeed0 = slice(0, decimalPointCoalSpeed0);
 	decimalCoalSpeed1 = decimalCoalSpeed;
 	wholeCoalSpeed = slice(0, decimalPointCoalSpeed) + decimalCoalSpeed0;
