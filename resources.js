@@ -177,12 +177,17 @@ function coalAuto() {
 	acoalspeed = coalgatherers / 100.00;
 	coalSpeed = acoalspeed.toString();
 	decimalPointCoalSpeed = coalSpeed.indexOf(".");
-	decimalCoalSpeed = coalSpeed.slice(decimalPointCoalSpeed + 1);
-	decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
-	decimalPointCoalSpeed0 = decimalCoalSpeed2.indexOf(".");
-	decimalCoalSpeed0 = coalSpeed.slice(0, decimalPointCoalSpeed0);
-	decimalCoalSpeed1 = decimalCoalSpeed;
-	wholeCoalSpeed = parseInt(coalSpeed.slice(0, decimalPointCoalSpeed)) + parseInt(decimalCoalSpeed0);
+	if (decimalPointCoalSpeed != -1) {
+		decimalCoalSpeed = coalSpeed.slice(decimalPointCoalSpeed + 1);
+		decimalCoalSpeed2 = decimalCoalSpeed + decimalCoalSpeed1;
+		decimalPointCoalSpeed0 = decimalCoalSpeed2.indexOf(".");
+		decimalCoalSpeed0 = coalSpeed.slice(0, decimalPointCoalSpeed0);
+		decimalCoalSpeed1 = decimalCoalSpeed;
+		wholeCoalSpeed = parseInt(coalSpeed.slice(0, decimalPointCoalSpeed)) + parseInt(decimalCoalSpeed0);
+	}
+	if (decimalPointCoalSpeed == -1) {
+		wholeCoalSpeed = parseInt(coalSpeed);
+	}
 	if (coalgatherers != 0) {
 		coal = coal + wholeCoalSpeed;
 	}
