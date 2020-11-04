@@ -182,7 +182,7 @@ function coalAuto() {
 	decimalPointCoalSpeed0 = decimalCoalSpeed2.indexOf(".");
 	decimalCoalSpeed0 = coalSpeed.slice(0, decimalPointCoalSpeed0);
 	decimalCoalSpeed1 = decimalCoalSpeed;
-	wholeCoalSpeed = parseInt(coalSpeed.slice(0, decimalPointCoalSpeed)) + decimalCoalSpeed0;
+	wholeCoalSpeed = parseInt(coalSpeed.slice(0, decimalPointCoalSpeed)) + parseInt(decimalCoalSpeed0);
 	if (coalgatherers != 0) {
 		coal = coal + wholeCoalSpeed;
 	}
