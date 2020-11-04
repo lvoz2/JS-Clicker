@@ -26,6 +26,7 @@ function variable() {
 	window.coalspeed = 0;
 	window.coalgatherers = 0;
 	window.coalSpeed;
+	window.acoalspeed;
 	window.decimalPointCoalSpeed;
 	window.decimalCoalSpeed;
 	window.decimalCoalSpeed2;
