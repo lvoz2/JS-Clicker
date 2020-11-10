@@ -180,7 +180,8 @@ function coalAuto() {
 	if (decimalPointCoalSpeed != -1) {
 		decimalCoalSpeed = coalSpeed.slice(decimalPointCoalSpeed + 1);
 		decimalCoalSpeed3 = parseInt(decimalCoalSpeed) + parseInt(decimalCoalSpeed1);
-		decimalCoalSpeed2 = decimalCoalSpeed3.toString();
+		decimalCoalSpeed4 = decimalCoalSpeed3 / 100.00;
+		decimalCoalSpeed2 = decimalCoalSpeed4.toString();
 		decimalPointCoalSpeed0 = decimalCoalSpeed2.indexOf(".");
 		decimalCoalSpeed0 = coalSpeed.slice(0, decimalPointCoalSpeed0);
 		decimalCoalSpeed1 = decimalCoalSpeed;
