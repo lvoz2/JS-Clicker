@@ -175,8 +175,9 @@ function alternate() {
 }
 function coalAuto() {
 	coalSpeed = coalgatherers / 100.00;
+	outerCoal = outerCoal + coalSpeed;
 	if (coalgatherers != 0) {
-		coal = coal + parseInt(coalSpeed.toString());
+		coal = coal + round(outerCoal);
 	}
 	pcoal.innerHTML = coal;
 	setTimeout(coalAuto, 10);
