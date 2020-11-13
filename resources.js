@@ -174,24 +174,9 @@ function alternate() {
 	load()
 }
 function coalAuto() {
-	acoalspeed = coalgatherers / 100.00;
-	coalSpeed = acoalspeed.toString();
-	decimalPointCoalSpeed = coalSpeed.indexOf(".");
-	if (decimalPointCoalSpeed != -1) {
-		decimalCoalSpeed = coalSpeed.slice(decimalPointCoalSpeed + 1);
-		decimalCoalSpeed3 = parseInt(decimalCoalSpeed) + parseInt(decimalCoalSpeed1);
-		decimalCoalSpeed4 = decimalCoalSpeed3 / 100.00;
-		decimalCoalSpeed2 = decimalCoalSpeed4.toString();
-		decimalPointCoalSpeed0 = decimalCoalSpeed2.indexOf(".");
-		decimalCoalSpeed0 = decimalCoalSpeed2.slice(decimalPointCoalSpeed0 + 1);
-		decimalCoalSpeed1 = decimalCoalSpeed;
-		wholeCoalSpeed = parseInt(coalSpeed.slice(0, decimalPointCoalSpeed)) + parseInt(decimalCoalSpeed0);
-	}
-	if (decimalPointCoalSpeed == -1) {
-		wholeCoalSpeed = parseInt(coalSpeed);
-	}
+	coalSpeed = coalgatherers / 100.00;
 	if (coalgatherers != 0) {
-		coal = coal + wholeCoalSpeed;
+		coal = coal + parseInt(coalSpeed.toString());
 	}
 	pcoal.innerHTML = coal;
 	setTimeout(coalAuto, 10);
