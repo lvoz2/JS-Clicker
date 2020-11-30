@@ -175,10 +175,10 @@ function alternate() {
 }
 function coalAuto() {
 	acoalspeed = coalgatherers / 100.00;
-	coalSpeed = acoalspeed.toString();
-	decimalPointCoalSpeed = coalSpeed.indexOf(".");
+	coalSpeed = acoalspeed.toString(); //coalSpeed is a string version of acoalspeed
+	decimalPointCoalSpeed = coalSpeed.indexOf("."); //Finding the decimal place in coalSpeed
 	if (decimalPointCoalSpeed != -1) {
-		decimalCoalSpeed = coalSpeed.slice(decimalPointCoalSpeed + 1);
+		decimalCoalSpeed = coalSpeed.slice(decimalPointCoalSpeed + 1); //Should take the value of the decimal in coalSpeed variable
 		decimalCoalSpeed3 = parseInt(decimalCoalSpeed) + parseInt(decimalCoalSpeed1);
 		decimalCoalSpeed4 = decimalCoalSpeed3 / 100.00;
 		decimalCoalSpeed2 = decimalCoalSpeed4.toString();
