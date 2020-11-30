@@ -174,6 +174,7 @@ function alternate() {
 	load()
 }
 function coalAuto() {
+<<<<<<< HEAD
 	acoalspeed = coalgatherers / 100.00;
 	coalSpeed = acoalspeed.toString(); //coalSpeed is a string version of acoalspeed
 	decimalPointCoalSpeed = coalSpeed.indexOf("."); //Finding the decimal place in coalSpeed
@@ -190,8 +191,12 @@ function coalAuto() {
 	if (decimalPointCoalSpeed == -1) {
 		wholeCoalSpeed = parseInt(coalSpeed);
 	}
+=======
+	coalSpeed = coalgatherers / 100.00;
+	outerCoal = outerCoal + coalSpeed;
+>>>>>>> 99ce07f4652e7992d537b188819168ba8933b33e
 	if (coalgatherers != 0) {
-		coal = coal + wholeCoalSpeed;
+		coal = coal + Math.round(outerCoal);
 	}
 	pcoal.innerHTML = coal;
 	setTimeout(coalAuto, 10);
