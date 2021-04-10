@@ -52,9 +52,6 @@ function sellResource() {
 		screenUpdate()
 	}
 }
-$(document).ready(function(){
-	variable()
-})
 function reset() {
 	localStorage.clear()
 	divmakecoal.innerHTML = '<button class="button" onclick="coalOre()">Gain 1 Coal Ore</button>';
@@ -174,7 +171,6 @@ function alternate() {
 	load()
 }
 function coalAuto() {
-<<<<<<< HEAD
 	acoalspeed = coalgatherers / 100.00;
 	coalSpeed = acoalspeed.toString(); //coalSpeed is a string version of acoalspeed
 	decimalPointCoalSpeed = coalSpeed.indexOf("."); //Finding the decimal place in coalSpeed
@@ -191,10 +187,8 @@ function coalAuto() {
 	if (decimalPointCoalSpeed == -1) {
 		wholeCoalSpeed = parseInt(coalSpeed);
 	}
-=======
 	coalSpeed = coalgatherers / 100.00;
 	outerCoal = outerCoal + coalSpeed;
->>>>>>> 99ce07f4652e7992d537b188819168ba8933b33e
 	if (coalgatherers != 0) {
 		coal = coal + Math.round(outerCoal);
 	}
@@ -397,3 +391,6 @@ function savetofile() {
 	savetoLS('save', save);
 	savetoLS('hi', true);
 }
+$(document).ready(function(){
+	gameStart()
+})
