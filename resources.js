@@ -392,5 +392,5 @@ function savetofile() {
 	savetoLS('hi', true);
 }
 $(document).ready(function(){
-	gameStart()
+	variable()
 })
